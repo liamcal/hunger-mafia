@@ -1,0 +1,40 @@
+Joel Acquilina, you use the telescope to successfully invesitgate Deanna Arora.
+	You learn that Deanna Arora is a regular Tribute.
+	You learn that Deanna Arora's stats are: {Strength: 9, Agility: 9, Defence: 6, Luck: 6}
+	Telescope - Remaining Uses: 4
+
+A sponsor has sent you a Strength Serum!
+Strength Serum - Active Item, Boosts: +2 Strength (Temporary), Uses: 1
+	A sparkling red liquid sealed inside a small glass vial.
+	On any night, as well as performing a basic action, you may also choose to use this item on yourself. The Strength Serum will give you a temporary +2 boost to your Strength stat for the remainder of the night.
+
+You have received a note from your district partner!
+	"Hello"
+
+Hayley van Waas, a sponsor has sent you a Dagger!
+Dagger - Passive Item, Bonuses: +1 Strength
+	A small, yet sharp, handheld dagger. It's not a particularly powerful weapon, but it can still be lethal when it matters.
+	While in your possession, this item grants a permanent +1 boost to your Strength score.
+
+Robbie Collins, a sponsor has sent you a vial of Medicine!
+Medicine - Active Item, Ability: Heal, Uses: 1
+	A single use vial of foul smelling medicing. It is capable of healing any wounds, provided you can put up with the stink.
+	On any night, instead of performing a basic action, you may choose to use this item on any player. That player will be unable to be killed during the Night phase. 
+
+Shea Bunge, you have received a note from your district partner!
+	"sup dardz i aint no career wbu homie xoxo ily"
+
+Evan Kohilas, you have received a note from your district partner!
+	"Deanna pushing sus on rach quite hard, what are your thoughts? Not sure what you are but it's worth "... 
+	The message seems to trail off uncompleted at the end
+
+You also engage in combat with Liam Cahill!
+	He is unable to block your attack, and you kill him. You attempt to raid his body, but see that he is not carrying anything. You escape the Cornucopia unharmed.
+
+Andrew Titmuss, you have received a note from your district partner!
+	"I did not go to the cornucopia"
+
+Bryan Mitchell, you have received a note from your district partner!
+	"Heya Mr. Sandpaper
+	Any ideas?
+	#TrustInBryan"

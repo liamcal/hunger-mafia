@@ -1,0 +1,25 @@
+Alex Rowell, you drink a Strength Serum before attempting to bomb Caitlin Bell!
+	Unfortunately, the grenade misses its target.
+	Greande, remaining uses: 0
+	Strength Serum, remaining uses: 0
+You are engaged in combat by Terry Watson!
+	You are unable to block his attack, and he kills you.
+	RIP
+
+Terry Watson, you engage in combat with Alex Rowell!
+	He is unable to block your attack, and you successfully kill him.
+	You raid a Lucky Charm from his body.
+Lucky Charm - Passive Item, Bonuses: +1 Luck
+	A small gold amulet connected to a fine chain. A magnificent jewel glistens in the centre of the charm. 
+	While in your possession, this item grants a permanent +1 boost to your Luck score.
+
+Caitlin Bell, you attempt to engage in combat with Maddie Mackey!
+	However you are unable to locate her.
+
+Evan Kohilas, you attempt to engage in combat with David Vo!
+	However you are unable to locate him.
+	Luck Serum, remaining uses: 0
+	
+Maddie Mackey, you attempt to engage in combat with Evan Kohilas.
+	However you are unable to locate him.
+

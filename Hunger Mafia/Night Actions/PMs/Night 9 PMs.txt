@@ -1,0 +1,108 @@
+Andrew Titmuss, you have received a Lucky Sword from the Feast!
+Lucky Sword - Passive Item, Bonuses: +2 Strength, +1 Luck
+	A glistening golden sword with a magnificient aura of power.
+	While in your possession, this item grants a permanent +2 boost to your Strength score and a +1 boost to your Luck score.
+You alse received a Trap from the Feast!
+Trap - Active Item, Ability: Trap, Uses: 1
+	An intricate contraption to incapacitate another Tribute. 
+	On any night, instead of performing a basic action, you may instead choose to use this item on any other player. That player will be "Trapped" for the night, and 
+	will be unable to perform any actions.
+You are engaged in combat by Evan Kohilas at the Feast!
+	You are unable to block his attack, and he successfully kills you.
+	RIP
+
+
+Lauren Heading, you have received a Lucky Armour from the Feast!
+Lucky Armour - Passive Item, Bonuses: +2 Defence, +1 Luck
+	A  glistening golden set of armour with a magnigicent aura of power. 
+	While in your possession, this item grants a permanent +2 boost to your Defence score and a +1 boost to your Luck score.
+You also received a Telescope from the Feast!
+Telescope - Active Item, Ability: Investigate, Uses: 2
+	An ornate, collapsible  telescope with an extremely powerful lens.
+	On any night, instead of performing a basic action, you may instead choose to use this item on any other player. The telescope will allow you to determine if that player is a career or not, as well as their base stats.
+You are engaged in combat by Evan Kohilas!
+	You are unable to block his attack, and he successfully kills you.
+	RIP
+
+
+David Vo, you received a Defence Serum from the Feast!
+Defence Serum - Active Item, Boosts: +2 Defence (Temporary), Uses: 1
+	A sparkling blue liquid sealed inside a small glass vial.
+	On any night, as well as performing a basic action, you may also choose to use this item on yourself. The Defence Serum will give you a temporary +2 boost to your Defence stat for the remainder of the night.
+You are engaged in combat by Alex Rowell at the Feast!
+	He successfully blocks your attack, however you also block his counter-attack, and you both escape unharmed.
+
+
+Hayley van Waas, you have received a Lucky Charm from the Feast!
+Lucky Charm - Passive Item, Bonuses: +1 Luck
+	A small gold amulet connected to a fine chain. A magnificent jewel glistens in the centre of the charm. 
+	While in your possession, this item grants a permanent +1 boost to your Luck score.
+You engage in combat with Evan Kohilas!
+	He successfully blocks your attack, but you are unable to block his counterattack and he kills you.
+	RIP
+
+
+Evan Kohilas, you have received a Light Armour from the Feast!
+Light Armour - Passive Item, Bonuses: +1 Defence
+	A set of lightweight leather armour. It's not particularly tough, but it's better than nothing and won't slow you down.
+	While in your possession, this item grants a permanent +1 boost to your Defence score.
+
+You engage in combat with Andrew Titmuss at the Feast!
+	He is unable to block your attack, and you successfully kill him.
+	You raid a Trap from his body.
+Trap - Active Item, Ability: Trap, Uses: 1
+	An intricate contraption to incapacitate another Tribute. 
+	On any night, instead of performing a basic action, you may instead choose to use this item on any other player. That player will be "Trapped" for the night, and 
+	will be unable to perform any actions.
+
+You are engaged in combat by Mitchell Busby.
+	You successfully block his attack, but he is unable to block your counter-attack, and you successfully kill him.
+	You raid a Broad Sword from his body.
+Broad Sword - Passive Item, Bonuses: +2 Strength, -1 Agility
+	A large and intimidating sword, capable of doing a lot of damage. It requires two hands to weld, and is a little heavy to carry around.
+	While in your possession, this item grants a permanent +2 boost to your Strength score, but also applies a -1 penalty to your Agility Score. 
+
+You attempt to kill Lauren Heading.
+	She is unable to block your attack, and you successfully kill her.
+	You raid a Telescope from her body.
+Telescope - Active Item, Ability: Investigate, Uses: 2
+	An ornate, collapsible  telescope with an extremely powerful lens.
+	On any night, instead of performing a basic action, you may instead choose to use this item on any other player. The telescope will allow you to determine if that player is a career or not, as well as their base stats.
+
+You are engaged in combat by Hayley van Waas!
+	You successfully block her attack, but she is unable to block your counter-attack, and you succesfully kill her.
+	You raid a Lucky Charm from her body.
+Lucky Charm - Passive Item, Bonuses: +1 Luck
+	A small gold amulet connected to a fine chain. A magnificent jewel glistens in the centre of the charm. 
+	While in your possession, this item grants a permanent +1 boost to your Luck score.
+
+
+Alex Rowell, you have received a Strength Serum from the Feast!
+Strength Serum - Active Item, Boosts: +2 Strength (Temporary), Uses: 1
+	A sparkling red liquid sealed inside a small glass vial.
+	On any night, as well as performing a basic action, you may also choose to use this item on yourself. The Strength Serum will give you a temporary +2 boost to your Strength stat for the remainder of the night.
+You engage in combat with David Vo at the Feast!
+	He successfully blocks your attack, however you also block his counter-attack, and you both escape unharmed.
+You successfully consume your Defence Serum.
+	Defence Serum, remaining uses: 0
+
+
+Maddie Mackey, you have received a Medicine from the Feast!
+Medicine - Active Item, Ability: Heal, Uses: 1
+	A single use vial of foul smelling medicine. It is capable of healing any wounds, provided you can put up with the stink.
+	On any night, instead of performing a basic action, you may choose to use this item on any player. That player will be unable to be killed during the Night phase.
+
+
+Terry Watson, you attempt to use your Poison Dart on Andrew Titmuss!
+	However, you couldn't as they were already dead.
+	You may still use your Poison Dart on another night if you wish.
+
+
+Caitlin Bell, you attempted to engage in combat with Hayley van Waas!
+	However, you couldn't as tehy were already dead.
+	You may still use your Attack on another night if you wish.
+
+
+Mitchell Busby, you engage in combat with Evan Kohilas!
+	He successfully blocks your attack, but you are unable to block his counterattack and he kills you.
+	RIP

@@ -1,0 +1,40 @@
+Night 6
+
+Terry Watson, you attempt to engage in combat with Riley Hoolahan.
+	However you are unable to locate her.
+
+
+Alex Rowell, you have been struck by a poison dart!
+	That can't be good...
+A sponsor has sent you a Lucky Charm!
+Lucky Charm - Passive Item, Bonuses: +1 Luck
+	A small gold amulet connected to a fine chain. A magnificent jewel glistens in the centre of the charm. 
+	While in your possession, this item grants a permanent +1 boost to your Luck score.
+
+
+Caitlin Bell, you attempt to use a Grenade on Riley Hoolahan. 
+	You throw the Grenade, but it misses completely, exploding harmlessly in the distance.
+	Grenade, Remaining Uses: 1
+
+
+Maddie Wagner, you successfully use your Poison Dart on Alex Rowell!
+	Poison Dart, Remaining Uses: 0
+
+
+Bryan Mitchell, a sponsor has sent you a Strength Serum!
+Strength Serum - Active Item, Boosts: +2 Strength (Temporary), Uses: 1
+	A sparkling red liquid sealed inside a small glass vial.
+	On any night, as well as performing a basic action, you may also choose to use this item on yourself. The Strength Serum will give you a temporary +2 boost to your Strength stat for the remainder of the night.
+
+
+Riley Hoolahan, a sponsor has sent you a Broadsword!
+Broad Sword - Passive Item, Bonuses: +2 Strength, -1 Agility
+	A large and intimidating sword, capable of doing a lot of damage. It requires two hands to weld, and is a little heavy to carry around.
+	While in your possession, this item grants a permanent +2 boost to your Strength score, but also applies a -1 penalty to your Agility Score.
+
+
+
+Maxwell Hajncl, you have received a note from your district partner!
+	"pretty sus on Maddie W. Thoughts??""
+
+

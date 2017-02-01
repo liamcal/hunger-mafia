@@ -1,0 +1,18 @@
+Terry Watson, you successfully poison Maddie Mackey!
+	Poison Dart, remaining uses: 0
+You are engaged in combat by Evan Kohilas!
+	You are unable to block his attack, and he kills you.
+	RIP
+
+Evan Kohilas, you engage in combat with Terry Watson
+	He is unable to block your attack, and you successfully kill him.
+	You raid a Lucky Charm from his body
+Lucky Charm - Passive Item, Bonuses: +1 Luck
+	A small gold amulet connected to a fine chain. A magnificent jewel glistens in the centre of the charm. 
+	While in your possession, this item grants a permanent +1 boost to your Luck score.
+
+Caitlin Bell, you successfully trap Maddie Mackey!
+	Trap, remaining uses: 0
+
+Maddie Mackey, during the night you have been poisoned!
+	That can't be good...

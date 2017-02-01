@@ -1,0 +1,11 @@
+Player,Action,Target
+Lauren McNamara,Attack,Ben Myers
+David Vo,Follow,Lauren Heading
+Riley Hoolahan,Attack,Aretha Peethamparam
+Evan Kohilas,Kill,Lauren Heading
+Shea Bunge,Poison,Evan Kohilas
+Terry Watson,Attack,Ben Myers
+Aretha Peethamparam,Guard,
+Joel Aquilina,Investigate,Riley Hoolahan
+Lauren Heading,Protect,Joel Aquilina
+Ben Myers,Attack,Riley Hoolahan

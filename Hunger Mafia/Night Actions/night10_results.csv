@@ -1,0 +1,9 @@
+Line,Player,Action,Target,Result
+6,Alex Rowell,StrengthSerum,,
+0,Evan Kohilas,LuckSerum,,
+7,Alex Rowell,Bomb,Caitlin Bell,Failed: Dodged
+4,David Vo,Guard,,Success
+1,Evan Kohilas,Attack,David Vo,Hidden
+2,Maddie Mackey,Attack,Evan Kohilas,Hidden
+3,Caitlin Bell,Attack,Maddie Mackey,Hidden
+5,Terry Watson,Kill,Alex Rowell,Success

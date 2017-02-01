@@ -1,0 +1,13 @@
+Line,Player,Action,Target,Result
+8,Shane Arora,Trap,Joel Aquilina,Success
+0,Lauren Heading,Protect,Joel Aquilina,Success
+9,Joel Aquilina,StrengthSerum,,Failed: Player Trapped
+3,Bryan Mitchell,Hide,,Success
+10,Joel Aquilina,Hide,,Failed: Player Trapped
+2,Terry Watson,Hide,,Success
+5,Maddie Mackey,Guard,,Success
+1,Riley Hoolahan,Guard,,Success
+6,Alex Rowell,Attack,Shane Arora,Success
+11,Evan Kohilas,Kill,Joel Aquilina,Protected from Attack
+7,Hayley van Waas,Attack,Lauren Heading,Hidden
+4,Robbie Collins,Attack,Terry Watson,Hidden

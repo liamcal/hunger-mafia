@@ -1,0 +1,12 @@
+Line,Player,Action,Target,Result
+9,Lauren Heading,Protect,Joel Aquilina,Success
+8,Joel Aquilina,Investigate,Riley Hoolahan,Success: Tribute
+5,Shea Bunge,Poison,Evan Kohilas,Success
+1,Maddie Wagner,Guard,,Success
+7,Aretha Peethamparam,Guard,,Success
+4,Evan Kohilas,Kill,Lauren Heading,Hidden
+10,Ben Myers,Attack,Riley Hoolahan,Failed
+0,Lauren McNamara,Attack,Ben Myers,Countered
+3,Riley Hoolahan,Attack,Aretha Peethamparam,Success
+6,Terry Watson,Attack,Ben Myers,Hidden
+2,David Vo,Follow,Lauren Heading,"Success: [('Protect', Joel Aquilina)]"

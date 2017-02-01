@@ -1,0 +1,9 @@
+Line,Player,Action,Target,Result
+2,Alex Rowell,Heal,Lauren Heading,Success
+1,Maddie Wagner,Poison,Alex Rowell,Success
+4,Caitlin Bell,Bomb,Lauren Heading,Failed: Dodged
+6,Evan Kohilas,Hide,,Success
+5,Lauren Heading,Guard,,Success
+3,Bryan Mitchell,Guard,,Success
+0,David Vo,Guard,,Success
+7,Terry Watson,Kill,Riley Hoolahan,Hidden

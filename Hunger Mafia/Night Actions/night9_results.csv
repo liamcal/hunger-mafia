@@ -1,0 +1,9 @@
+Line,Player,Action,Target,Result
+1,Alex Rowell,DefenceSerum,,
+6,Terry Watson,Poison,Andrew Titmuss,Failed: Target already dead
+0,David Vo,Hide,,Success
+2,Alex Rowell,Guard,,Success
+7,Mitchell Busby,Attack,Evan Kohilas,Countered
+3,Evan Kohilas,Kill,Lauren Heading,Success
+4,Hayley van Waas,Attack,Evan Kohilas,Countered
+5,Caitlin Bell,Attack,Hayley van Waas,

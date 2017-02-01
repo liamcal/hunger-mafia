@@ -1,0 +1,69 @@
+Night 4
+
+Joel Aquilina, you use the telescope to successfully investigate Riley Hoolahan!
+	You learn that Riley Hoolahan is a Tribute.
+	You learn that Riley Hoolahan's stats are: {Strength: 10, Agility: 5 Defence: 8, Luck: 5}
+	Telescope - Remaining Uses: 2
+
+
+Evan Kohilas, you attempt to engage in combat with Lauren Heading!
+	However you are unable to locate her. 
+You have been struck by a poison dart!
+	That can't be good...
+
+
+Ben Myers, you engage in combat with Riley Hoolahan!
+	She blocks your attack, but you also block her counterattack. You both escape unharmed.
+You are engaged in combat by Lauren McNamara
+	You blocks her attack, but she is unable to block your counterattack. You successfully kill her. 
+	You attempt to raid, but she is not carrying anything.
+
+
+Riley Hoolahan, you are engaged in combat by Ben Myers!
+	You blocks his attack, but he also block your counterattack. You both escape unharmed.
+You engage in combat with Arethat Peethamparam!
+	She is unable to block your attack, and you successfully kill her.
+	You attempt to raid, and obtain a pair of Running Shoes!
+Running Shoes - Passive Item, Bonuses: +1 Agility
+	An extremely comfortable and well-fitting pair of bright red running shoes. Red makes everything go faster, including you.
+	While in your possession, this item grants a permanent +1 boost to your Agility score.
+
+
+Lauren McNamara, you engage in combat with Ben Myers!
+	He blocks your attack, but you are unable to his counterattack and are killed.
+	RIP
+
+Aretha Peethamparam, you are engaged in combat by Riley Hoolahan!
+	You are unable to block her attack, and you are killed.
+	RIP
+
+
+Terry Watson, you attempt to engage in combat with Ben Myers!
+	However you are unable to locate him. 
+
+David Vo, you use your Scout Drone to follow Lauren Heading!
+	You observe them Protecting Joel Aquilina.
+
+
+Michael Cui, a sponsor has sent you a Defence Serum!
+Defence Serum - Active Item, Boosts: +2 Defence (Temporary), Uses: 1
+	A sparkling red liquid sealed inside a small glass vial.
+	On any night, as well as performing a basic action, you may also choose to use this item on yourself. The Defence Serum will give you a temporary +2 boost to your Defence stat for the remainder of the night.
+
+
+Caitlin Bell, a sponsor has sent you a Grenade Set!
+Grenade Set - Active Item, Ability: Follow, Uses: 2
+	A pair of small yet extremely powerful explosives. Usable as an offensive weapon or to make a last stand.
+	On any night, instead of performing a basic action, you may choose to use this item on any player. The Grenade will have a 50% base chance of killing them in the explosion.
+	Alternatively, if you are killed by another player and are holding at least one Grenade, you will automatically pull the pin and use it on them. In this case, the Grenade will have a 75% base chance of killing them.
+	In either circumstances, your Luck may work to increase the likelihood of success.
+
+
+Shea Bunge, a sponsor has sent you a Light Armour!
+Light Armour - Passive Item, Bonuses: +1 Defence
+	A set of lightweight leather armour. It's not particularly tough, but it's better than nothing and won't slow you down.
+	While in your possesion, this item grants a permanent +1 boost to your Defence score.
+
+
+Maddie Mackey, you have received a note from your district partner!
+	 "watching Lauren Heading for any suspicious actions"

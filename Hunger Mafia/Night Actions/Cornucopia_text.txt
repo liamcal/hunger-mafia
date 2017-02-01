@@ -1,0 +1,66 @@
+Shane Arora, you have received a Trap Kit!
+Trap Kit - Active Item, Ability: Trap, Uses: 3
+	A handy kit containing all sorts of devices and contraptions to incapacitate another Tribute. 
+	On any night, instead of performing a basic action, you may instead choose to use this item on any other player. That player will be "Trapped" for the night, and will be unable to perform any actions. 
+
+Bryan Mitchell, you have received a Dagger!
+Dagger - Passive Item, Bonuses: +1 Strength
+	A small, yet sharp, handheld dagger. It's not a particularly powerful weapon, but it can still be lethal when it matters.
+	While in your possession, this item grants a permanent +1 boost to your Strength score.
+
+Alex Rowell, you have received a Light Armour!
+Light Armour - Passive Item, Bonuses: +1 Defence
+	A set of lightweight leather armour. It's not particularly tough, but it's better than nothing and won't slow you down.
+	While in your possession, this item grants a permanent +1 boost to your Defence score.
+
+Aretha Peethamparam, you received a pair of Running Shoes!
+Running Shoes - Passive Item, Bonuses: +1 Agility
+	An extremely comfortable and well-fitting pair of bright red running shoes. Red makes everything go faster, including you.
+	While in your possession, this item grants a permanent +1 boost to your Agility score.
+	
+Mitchell Busby, you have received a Broad Sword!
+Broad Sword - Passive Item, Bonuses: +2 Strength, -1 Agility
+	A large and intimidating sword, capable of doing a lot of damage. It requires two hands to weld, and is a little heavy to carry around.
+	While in your possession, this item grants a permanent +2 boost to your Strength score, but also applies a -1 penalty to your Agility Score. 
+
+Lauren Heading, you have received a Medpack!
+Medpack - Active Item, Ability: Protect, Uses: 5
+	An essential kit containing a large number of medical supplies that can be used to heal the wounds of others.
+	On any night, instead of performing a basic action, you may instead choose to use this item on any other player. That player will be "Protected" for the night, and will be prevented from being killed during that time. Some other negative ailments may also be cured.
+
+Michael Cui, you have received a Lucky Charm!
+Lucky Charm - Passive Item, Bonuses: +1 Luck
+	A small gold amulet connected to a fine chain. A magnificent jewel glistens in the centre of the charm. 
+	While in your possession, this item grants a permanent +1 boost to your Luck score.
+
+Joel Acquilina, you have received a Telescope!
+Telescope - Active Item, Ability: Investigate, Uses: 5
+	An ornate, collapsible  telescope with an extremely powerful lens.
+	On any night, instead of performing a basic action, you may instead choose to use this item on any other player. The telescope will allow you to determine if that player is a career or not, as well as their base stats.
+
+David Vo, you have received a Heavy Armour!
+Heavy Armour - Passive Item, Bonuses: +2 Defence, -1 Agility
+	A set of sturdy chain-mail, capable of absorbing a large amount of force. While tough, it's also quite heavy to carry around.
+	While in your possession, this item grants a permanent +2 boost to your Defence score, but also applies a -1 penalty to your Agility Score. 
+
+Shea Bunge, you have received a Poison Dart!
+Poison Dart - Active Item, Ability: Poison, Uses: 1
+	A long hollow tube containing a single dart, laced with one of the most potent poisons known to man. 
+	On any night, instead of performing a basic action, you may instead choose to use this item on any other player. That player will be "Poisoned" during that night. A poisoned player will die at the end of the night, two (2) nights later. (eg. if poisoned on N1, will die at the end of N3).
+
+Evan Kohilas, you engage in combat with Quinn Roberts at the Cornucopia!
+	He is unable to block your attack, and you kill him. You attempt to raid his body, but see that he is not carrying anything. You escape the Cornucopia unharmed.
+
+Quinn Roberts, you are engaged in combat with Evan Kohilas at the Cornucopia!
+	You are unable to block his attack, and are killed by him. You are now dead.
+
+Andrew Titmuss, you engage in combat with Liam Cahill at the Cornucopia!
+	He blocks your attack. You also block his counter-attack. You both survive and escape the Cornucopia unharmed. 
+
+Liam Cahill, you are engaged in combat by Andrew Titmuss at the Cornucopia!
+	He blocks your attack. You also block his counter-attack. You both survive and escape the Cornucopia unharmed. 
+
+
+
+
+

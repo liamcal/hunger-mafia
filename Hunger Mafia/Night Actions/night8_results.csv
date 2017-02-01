@@ -1,0 +1,8 @@
+Line,Player,Action,Target,Result
+1,Alex Rowell,Bomb,Bryan Mitchell,
+6,Lauren Heading,Hide,,Failed: Cooldown
+0,Michael Cui,Hide,,Failed: Cooldown
+2,Bryan Mitchell,Hide,,Failed: Player Dead
+3,Evan Kohilas,Kill,Lauren Heading,Hidden
+4,Hayley van Waas,Attack,Bryan Mitchell,
+5,Terry Watson,Attack,David Vo,Failed: Cooldown

@@ -1,0 +1,71 @@
+Night 7
+
+Bryan Mitchell, you use the Strength Serum, before engaging in combat with Mitchell Busby.
+	He blocks your attack, but you are also able to block his counterattack. You both escape unharmed.
+	Strength Serum, remaining uses: 0
+
+A sponsor has sent you a Heavy Armour!
+Heavy Armour - Passive Item, Bonuses: +2 Defence, -1 Agility
+	A set of sturdy chain-mail, capable of absorbing a large amount of force. While tough, it's also quite heavy to carry around.
+	While in your possession, this item grants a permanent +2 boost to your Defence score, but also applies a -1 penalty to your Agility Score.
+
+You have received a note from your district partner!
+	"Any new items?
+	I'm sus of mainly the same but I need more evidence. R8?
+	soz 4 no ans, wil do in morn"
+
+
+
+Evan Kohilas, you attempt to engage in combat with Lauren Heading.
+	However you are unable to locate her.
+
+
+
+Alex Rowell, you successfully Trap Michael Cui!
+	Trap Kit, remaining uses: 0
+
+You have been healed of Posioning!
+
+A sponsor has sent you a Grenade Set!
+Grenade Set - Active Item, Ability: Follow, Uses: 2
+	A pair of small yet extremely powerful explosives. Usable as an offensive weapon or to make a last stand.
+	On any night, instead of performing a basic action, you may choose to use this item on any player. The Grenade will have a 50% base chance of killing them in the explosion.
+	Alternatively, if you are killed by another player and are holding at least one Grenade, you will automatically pull the pin and use it on them. In this case, the Grenade will have a 75% base chance of killing them.
+	In either circumstances, your Luck may work to increase the likelihood of success.
+
+
+
+Mitchell Busby, a sponsor has sent you an Agility Serum!
+Agility Serum - Active Item, Boosts: +2 Agility (Temporary), Uses: 1
+	A sparkling purple liquid sealed inside a small glass vial.
+	On any night, as well as performing a basic action, you may also choose to use this item on yourself. The Agility Serum will give you a temporary +2 boost to your Agility stat for the remainder of the night.
+
+
+
+Lauren Heading, you successfully Protect Alex Rowell!
+	Med Kit, remaining uses: 1
+
+You have received a note from your district partner!
+	"My items: passive +1 LCK, 1-use +2 DEF potion (only on self), 1-use trap (target can't do action)."
+
+
+
+Michael Cui, you attempt to Guard, but are unable to as you are caught in a Trap!
+	You are unable to perform any actions during the night.
+	You will be able to use Guard again tomorrow night if you wish.
+
+
+
+Caitlin Bell, you successfully bomb Riley Hoolahan!
+	Grenades, remaining uses: 0
+
+You are engaged in combat by David Vo!
+	You blocks his attack, but he is also able to block your counterattack. You both escape unharmed.
+
+You receive a note from your district partner!
+	"Sorry but I don't know if I should trust you. Best of luck today"
+
+
+
+Hayley van Waas, you have received a note from your district partner!
+	"Hey girl! What's up? Who you feeling is sus?"

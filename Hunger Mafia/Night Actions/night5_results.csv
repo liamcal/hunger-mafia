@@ -1,0 +1,12 @@
+Line,Player,Action,Target,Result
+7,Alex Rowell,Trap,Caitlin Bell,Success
+2,Lauren Heading,Protect,Evan Kohilas,Success
+6,Caitlin Bell,Bomb,Riley Hoolahan,Failed: Player Trapped
+5,Hayley van Waas,Hide,,Success
+1,David Vo,Hide,,Success
+0,Joel Aquilina,Hide,,Success
+9,Riley Hoolahan,Hide,,Success
+3,Shea Bunge,Guard,,Success
+8,Maddie Wagner,Guard,,Success
+4,Evan Kohilas,Kill,Joel Aquilina,Success
+10,Andrew Titmuss,Follow,Lauren Heading,"Success: [('Protect', Evan Kohilas)]"

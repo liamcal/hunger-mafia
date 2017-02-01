@@ -1,0 +1,17 @@
+Line,Player,Action,Target,Result
+1,Joel Aquilina,Investigate,Rachel Alger,Success: Career
+0,Maddie Wagner,Hide,,Success
+10,Shea Bunge,Hide,,Success
+3,Lauren Heading,Hide,,Success
+6,Alex Rowell,Hide,,Success
+9,Shane Arora,Hide,,Success
+11,Aretha Peethamparam,Hide,,Success
+2,Lauren McNamara,Hide,,Success
+13,Mitchell Busby,Guard,,Success
+4,Bryan Mitchell,Guard,,Success
+8,Michael Cui,Guard,,Success
+15,Ben Myers,Guard,,Success
+12,Andrew Titmuss,Guard,,Success
+7,Evan Kohilas,Attack,Mitchell Busby,Hidden
+5,Deanna Arora,Attack,Lauren McNamara,Countered
+14,Terry Watson,Kill,Aretha Peethamparam,Hidden

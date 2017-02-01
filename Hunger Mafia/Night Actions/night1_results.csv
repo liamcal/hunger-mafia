@@ -1,0 +1,20 @@
+Line,Player,Action,Target,Result
+11,Joel Aquilina,Investigate,Deanna Arora,Success: Tribute
+16,Mitchell Busby,Hide,,Success
+0,Michael Cui,Hide,,Success
+4,Ben Myers,Hide,,Success
+10,Deanna Arora,Hide,,Success
+6,Robbie Collins,Hide,,Success
+15,Andrew Titmuss,Hide,,Success
+18,Jacob Frilay,Hide,,Success
+13,Riley Hoolahan,Hide,,Success
+14,Caitlin Bell,Hide,,Success
+9,Rachel Alger,Hide,,Success
+1,Maddie Wagner,Guard,,Success
+12,Shea Bunge,Guard,,Success
+5,Lauren Heading,Guard,,Success
+7,Alex Rowell,Guard,,Success
+8,Shane Arora,Guard,,Success
+3,Lauren McNamara,Guard,,Success
+17,Evan Kohilas,Kill,Liam Cahill,Success
+2,Liam Cahill,Attack,Deanna Arora,Failed: Player Dead

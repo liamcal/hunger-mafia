@@ -1,0 +1,9 @@
+Player,Action,Target
+Evan Kohilas,LuckSerum,
+Evan Kohilas,Attack,David Vo
+Maddie Mackey,Attack,Evan Kohilas
+Caitlin Bell,Attack,Maddie Mackey
+David Vo,Guard,
+Terry Watson,Kill,Alex Rowell
+Alex Rowell,StrengthSerum,
+Alex Rowell,Bomb,Caitlin Bell

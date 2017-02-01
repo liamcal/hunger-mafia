@@ -1,0 +1,12 @@
+Line,Player,Action,Target,Result
+5,Alex Rowell,Trap,Michael Cui,Success
+4,Lauren Heading,Protect,Alex Rowell,Success
+1,Bryan Mitchell,StrengthSerum,,
+10,Caitlin Bell,Bomb,Riley Hoolahan,Success
+0,Maddie Mackey,Hide,,Success
+3,Maxwell Hajncl,Guard,,Success
+6,Michael Cui,Guard,,Failed: Player Trapped
+8,Riley Hoolahan,Guard,,Failed: Player Dead
+2,Bryan Mitchell,Attack,Mitchell Busby,Failed
+7,Evan Kohilas,Kill,Lauren Heading,Hidden
+9,David Vo,Attack,Caitlin Bell,Failed

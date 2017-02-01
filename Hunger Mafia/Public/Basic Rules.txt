@@ -1,0 +1,133 @@
+Basic Rules
+
+1) Object of the Game
+
+The object of the game “Mafia Talk!” is dependant on what side of the game you are playing on. There are two main factions: the Mafia and the Townspeople. Townspeople win the game when they have eliminated all Mafia from the game. Whereas, the Mafia win the game when there is no possible way for them to be eliminated  (this usually occurs when there is an equal amount or more Mafia in the Village at the end of a day or night).
+
+2) “Game Days”
+Obviously, in order to win, there must be a way to eliminated people from the village. This is where we begin to discuss the “game day”.
+
+The game day is divided into two sections, Day and Night. Below are the explanations fo each section:
+
+2a) Game Day
+
+Each day, the town will try to vote someone out of the Village. This is called “lynching” ala the Salem Witch Trials. The Mafia at this time will try to lead the Townspeople into lynching one of their own people while the Townspeople will try to get everyone to lynch a member of the Mafia. At the end of the day phase, the player with the most votes cast against them will be lynched.
+
+In the case of a tie, one player will be randomly selected from those tied to be lynched.
+
+Certain players may have abilities that affect their vote (such as making it count for more, or less), but you will know when that happens.
+
+2a(1))Voting
+
+You may vote at any time during in the day phase by commenting on the vote thread posted for that day. Whenever you vote, please do so in all caps, and tag the name of the playing who you are voting for (if you cannot tag, type the name out exactly how it appears on Facebook):
+
+VOTE: James Curran
+
+Of course, you can change your vote at any time. However, to change your vote, you must unvote (again, in bold), like so:
+
+UNVOTE: James Curran
+
+VOTE: Jimmy Murran
+
+Of course, you don’t have to immediately vote someone right after unvoting. Its your choice.
+
+You may also abstain from voting, indicating you do not wish to vote for anyone in particular. This is achieved like so:
+
+VOTE: ABSTAIN
+
+You may take this back at any time by unvoting abstain and voting for another player. 
+
+2b) Game Night
+
+After the lynching during the day, the game slips into night. During the night, NO ONE is to post any game related information in the chat. This particularly includes strategising about night actions, or discussing the results of the recent lynch.
+
+During the night, those people with roles will PM me their actions. These roles will be discussed in more detail in a later section.
+
+At the end of the night, I will post what occurred over the course of the night (who died, other effects, etc.). After everything from the night has been resolved, the Day begins again and chaos continues to occur until one team wins.
+
+2c) Limbo
+
+During the (hopefully) short time between the conclusion of each Day and Night phase, and the announcement of the results signalling the start of the next phase, the game will enter Limbo. Similar restrictions apply to Limbo as the Night phase, however any role actions submitted during this time will not be counted.
+
+2d) The game is over when I say its over.
+
+3) Factions
+
+There are three faction classes native to all Mafia games: the Townsfolk, the Mafia, and Independants.
+
+3a) Mafia
+
+The Mafia are a minority of town who are have a tendency for murder at night. Each night, the Mafia will converse through the provided chat thread and decide who they will kill that night. Mafia can only communicate like this DURING THE NIGHT!!! Anything posted in the Mafia thread outside of the night phase (including limbo), will be copied into the public thread wit your name on it. I will only accept the killing from one person, the Godfather.
+
+The Godfather is the head of the Mafia and makes the final decision on who to kill at night. The Godfather will PM the each night whom they decide to kill, along with who on the Mafia team will perform the kill. Only the Godfather can tell me who to kill, so communication between the Mafia is key.
+
+3b) The Townsfolk
+
+Without knowing the identity of those trying to kill them, the Townsfolk must band together to save themselves. The most useful way to remove threats is by discussion of previous events in the game, including the voting trends, lynch results and night time activities, and by voting to lynch those that are suspicious. Lynching is compulsory for the town during every day phase. 
+
+The townsfolk will have access to numerous other role-based abilities, which they must attempt to make the most of.
+
+3c) Independants
+
+Are alligned with neither the town, nor the mafia. Instead, they have their own separate and individual win conditions, which they must work towards. Depending on the nature of the win condition, sometimes it is possible for independant players to win along with either of the other factions. Regardless, it is generally in their best interest to appear innocent.
+
+3d) Other Roles
+
+There are many other roles in this game, such as Protectors, Investigators, Killing Roles, Roleblockers, Vote Alterers, Role Redirectors, Masons, etc. Many of them have been uniquely designed for this game. Extra roles have been distributed to players of all factions. This game has a hidden setup, which means the full role list WILL NOT be publically available. Full details of a player's role will be revealed upon their death.
+
+
+4) Other Rules
+
+4a) You CAN NOT talk to other people in the game about the game through PMs, IMs, email, etc. There are some roles that allow this, but on the whole, no one should be doing this. If you do have a role which permits discussion with other players, it must be done through a chatroom provided by the moderator. If I am told that someone has broken this rule, it most likely result in an AUTOMATIC MODKILL!
+
+4b) Don’t edit or delete posts on the vote thread, as each post is a valuable bit of information. If you edit a post once, you will receive a public warning. After the second edit, a mysterious bag of mod hammers will fall upon your head, essentially Modkilling you.
+
+4c) Each person may have a unique role, so revealing your role while many Mafia are about may be a bad idea. However, you are free to reveal your role in the public chat thread as you see fit. However, pay partiular attention to rule 4d below! You are also more than welcome to make a fake role and claim that instead. 
+
+4d) Do not quote anything I tell you from a PM directly in the public thread, or in any other chat threads you may have access to; adapt it into your own speaking style. This includes your role PM! Quoting also includes taking screenshots!!! If you are unsure if something counts as a quote, send it in a PM to me to check first. If you quote anything from my PMs directly, I will smite you with the might of the Mafia Overlord and you will be Modkilled.
+
+4e) TIMES FOR EACH DAY:
+
+A day will last about 12 hours (concluding at either 10:00pm or 12:00 midnight depending on preferences submitted with the signup form)
+A night will last about 10 hours or until I get all PMs in from individuals.
+The remaining time will be limbo.
+
+4f) Modkills
+
+There have been the above mention of the term “modkill”. In a modkill, a person is killed during the current phase. Depending on the nature of the offense, play may be continued as normal, or the day may be concluded early and the daily lynch cancelled. 
+
+4g) Inactivity
+A successful game requires active players. Inactivity negatively affects the game for all players, and is detrimental for both factions. As such, a certain level of activity is respected of all players. 
+
+Each player is required to make a vote during each day phase. This may include abstaining if there are no players you specifically want to vote through. Players who do not cast a vote (or abstain) for 3 consecutive days, or 5 days total, may be considered Inactive and are subject to replacement at the moderator's discretion. (Before this occurs, I will usually attempt to contact potentially inactive players to discuss the situation)
+While not strictly required or enforcable, it is expected that you attempt to check in with the chat room at least once a day, and contribute to discussion somewhat.
+
+4g(1)) Leave of Absence
+
+We get it, real life is hard, and we don't expect you to drop everything for Mafia. If you are going to be gone for a day or two, let me know via PM (beforehand preferably) and it is likely I will discount any days of not voting. It is also common courtesy to post in the chat thread to let the other players know what's happening. If you are going to be unavailble for an extended period of time (i.e. longer than 2-3 days), PM me and we will talk about either letting it slide or getting a replacement (temp replacement or permanent should the need be).
+
+5) Death
+
+When you are killed off during the course of the game you CAN NOT talk in the game topic anymore (particularly about game information). Any information you have accrued may not be passed onto another living person. FAILURE TO DO SO WILL RESULT IN A BAN FROM THE NEXT MAFFIA GAME.
+
+5a) Dead Chat
+Dead players will be given access to a "Dead Chat", where they may discuss the game with other dead players. While not strictly prohibited, spoilers are generally frowned upon in dead chat.
+
+6) Any other questions:
+
+Any other questions about the roles you’re playing, rules in general, or anything else, PM me.
+
+6a) Rules are subject to change (usually minorly) should the need be (and usually not need be).
+
+7) Sign Ups:
+
+Signups will take place via a Google Form, it will be available here:
+https://goo.gl/forms/gxShUl42M968fwvR2
+
+
+7a) Replacements
+Those that do not secure a place may opt to sign up instead as a replacement. If a player needs to be removed from the game (usually from inactivity, but occasionally due to other circumstances), a replacement will be randomly selected from the of available players. 
+If you miss the signup period, you may still sign up as a replacement, even if the game has begun.
+Those that signup as a replacement will be added into the game thread, to view the discussion but are unable to post. They are expected to follow all rules of the game, even before they receive a place (particularly in regards to private communication with other players or replacements).
+
+8) WOOHOO, you made it to the end! I know these rules are long, but I appreciate you taking the time to read them. It's been a while since we clarified a few of them, and this is the best way to make sure the game is successful for all. Good luck, and I hope you all enjoy the madness!

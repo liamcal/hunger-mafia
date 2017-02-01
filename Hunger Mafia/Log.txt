@@ -1,0 +1,521 @@
+~~~Night 2~~~	
+	Joel Aquilina used Telescope, remaining uses: 3
+	Recording action Joel Aquilina Investigate Rachel Alger
+	Joel Aquilina successfully investigates Rachel Alger and learns they are Career, and their stats are {'Strength': 9, 'Luck': 4, 'Agility': 4, 'Defence': 13}
+	Recording action Maddie Wagner Hide Maddie Wagner
+	Maddie Wagner successfully hides
+	Recording action Shea Bunge Hide Shea Bunge
+	Shea Bunge successfully hides
+	Recording action Lauren Heading Hide Lauren Heading
+	Lauren Heading successfully hides
+	Recording action Alex Rowell Hide Alex Rowell
+	Alex Rowell successfully hides
+	Recording action Shane Arora Hide Shane Arora
+	Shane Arora successfully hides
+	Recording action Aretha Peethamparam Hide Aretha Peethamparam
+	Aretha Peethamparam successfully hides
+	Recording action Lauren McNamara Hide Lauren McNamara
+	Lauren McNamara successfully hides
+	Recording action Mitchell Busby Guard Mitchell Busby
+	Mitchell Busby successfully guards
+	Recording action Bryan Mitchell Guard Bryan Mitchell
+	Bryan Mitchell successfully guards
+	Recording action Michael Cui Guard Michael Cui
+	Michael Cui successfully guards
+	Recording action Ben Myers Guard Ben Myers
+	Ben Myers successfully guards
+	Recording action Andrew Titmuss Guard Andrew Titmuss
+	Andrew Titmuss successfully guards
+	Recording action Evan Kohilas Attack Mitchell Busby
+	Evan Kohilas attempts an attack on Mitchell Busby
+	Evan Kohilas has a Agility stat of 10, ([10, 0, 0, 0])
+	Mitchell Busby has a Agility stat of 12, ([13, 0, 0, -1])
+	Search Check. Target: 0.5987063256829237, Roll: 0.40675504153124287, Result: Fail
+	Attack Failed, Evan Kohilas could not locate Mitchell Busby
+	Recording action Deanna Arora Attack Lauren McNamara
+	Deanna Arora attempts an attack on Lauren McNamara
+	Deanna Arora has a Agility stat of 10, ([9, 1, 0, 0])
+	Lauren McNamara has a Agility stat of 10, ([6, 0, 4, 0])
+	Search Check. Target: 0.4012936743170763, Roll: 0.6529429444707013, Result: Pass
+	Deanna Arora has a Strength stat of 9, ([9, 0, 0, 0])
+	Lauren McNamara has a Defence stat of 8, ([8, 0, 0, 0])
+	Attack Check. Target: 0.4012936743170763, Roll: 0.09478182279728153, Result: Fail
+	Deanna Arora has a Defence stat of 7, ([6, 1, 0, 0])
+	Lauren McNamara has a Strength stat of 11, ([10, 1, 0, 0])
+	Counter Check. Target: 0.4012936743170763, Roll: 0.9052181772027185, Result: Pass
+	Deanna Arora is now dead
+	Attack Failed, Deanna Arora was counter killed by Lauren McNamara
+	Player: Lauren McNamara attempted to raid from Deanna Arora, but was unsuccessful as they were not carrying anything
+	Recording action Terry Watson Kill Aretha Peethamparam
+	Terry Watson attempts a Career kill on Aretha Peethamparam
+	Terry Watson has a Agility stat of 4, ([4, 0, 0, 0])
+	Aretha Peethamparam has a Agility stat of 13, ([7, 1, 4, 1])
+	Search Check. Target: 0.9772498680518207, Roll: 0.5403488362508936, Result: Fail
+	Attack Failed, Terry Watson could not locate Aretha Peethamparam
+	Joel Aquilina retrieved Luck Serum
+	David Vo retrieved Scout Drone
+	Lauren Heading retrieved Trap
+
+~~~Night 3~~~
+	Shane Arora used Trap Kit, remaining uses: 2
+	Recording action Shane Arora Trap Joel Aquilina
+	Shane Arora successfully trapped Joel Aquilina
+	Lauren Heading used Medpack, remaining uses: 4
+	Recording action Lauren Heading Protect Joel Aquilina
+	Lauren Heading successfully protected Joel Aquilina
+	Joel Aquilina tried to StrengthSerum but cannot as they are Trapped
+	Recording action Bryan Mitchell Hide Bryan Mitchell
+	Bryan Mitchell successfully hides
+	Joel Aquilina tried to Hide but cannot as they are Trapped
+	Recording action Terry Watson Hide Terry Watson
+	Terry Watson successfully hides
+	Recording action Maddie Mackey Guard Maddie Mackey
+	Maddie Mackey successfully guards
+	Recording action Riley Hoolahan Guard Riley Hoolahan
+	Riley Hoolahan successfully guards
+	Recording action Alex Rowell Attack Shane Arora
+	Alex Rowell attempts an attack on Shane Arora
+	Alex Rowell has a Agility stat of 11, ([10, 1, 0, 0])
+	Shane Arora has a Agility stat of 10, ([9, 1, 0, 0])
+	Search Check. Target: 0.3085375387259869, Roll: 0.9145985908403516, Result: Pass
+	Alex Rowell has a Strength stat of 4, ([4, 0, 0, 0])
+	Shane Arora has a Defence stat of 5, ([4, 1, 0, 0])
+	Attack Check. Target: 0.5987063256829237, Roll: 0.8131653143171993, Result: Pass
+	Shane Arora is now dead
+	Attack Succeeded, Alex Rowell killed Shane Arora
+	Player: Alex Rowell raided a Trap Kit from Shane Arora
+	Recording action Evan Kohilas Kill Joel Aquilina
+	Evan Kohilas attempts a Career kill on Joel Aquilina
+	Evan Kohilas has a Agility stat of 10, ([10, 0, 0, 0])
+	Joel Aquilina has a Agility stat of 7, ([6, 1, 0, 0])
+	Search Check. Target: 0.15865525393145696, Roll: 0.7995896441253688, Result: Pass
+	Evan Kohilas has a Strength stat of 14, ([10, 0, 4, 0])
+	Joel Aquilina has a Defence stat of 6, ([5, 1, 0, 0])
+	Attack Check. Target: 0.02275013194817932, Roll: 0.5457892153490946, Result: Pass
+	Attack Prevented, Evan Kohilas tried to kill Joel Aquilina, but failed as target is protected
+	Recording action Hayley van Waas Attack Lauren Heading
+	Hayley van Waas attempts an attack on Lauren Heading
+	Hayley van Waas has a Agility stat of 8, ([8, 0, 0, 0])
+	Lauren Heading has a Agility stat of 12, ([12, 0, 0, 0])
+	Search Check. Target: 0.7733726476231317, Roll: 0.539178941859746, Result: Fail
+	Attack Failed, Hayley van Waas could not locate Lauren Heading
+	Recording action Robbie Collins Attack Terry Watson
+	Robbie Collins attempts an attack on Terry Watson
+	Robbie Collins has a Agility stat of 6, ([6, 0, 0, 0])
+	Terry Watson has a Agility stat of 8, ([4, 0, 4, 0])
+	Search Check. Target: 0.5987063256829237, Roll: 0.2249566790105838, Result: Fail
+	Attack Failed, Robbie Collins could not locate Terry Watson
+	Hayley van Waas retrieved Agility Serum
+	Andrew Titmuss retrieved Scout Drone
+	Maddie Wagner retrieved Poison Dart
+
+~~~Night 4~~~
+	Lauren Heading used Medpack, remaining uses: 3
+	Recording action Lauren Heading Protect Joel Aquilina
+	Lauren Heading successfully protected Joel Aquilina
+	Joel Aquilina used Telescope, remaining uses: 2
+	Recording action Joel Aquilina Investigate Riley Hoolahan
+	Joel Aquilina successfully investigates Riley Hoolahan and learns they are Tribute, and their stats are {'Strength': 10, 'Luck': 5, 'Agility': 5, 'Defence': 8}
+	Shea Bunge used Poison Dart, remaining uses: 0
+	Poison Dart is destroyed
+	Recording action Shea Bunge Poison Evan Kohilas
+	Shea Bunge successfully poisoned Evan Kohilas
+	Recording action Aretha Peethamparam Guard Aretha Peethamparam
+	Aretha Peethamparam successfully guards
+	Recording action Evan Kohilas Kill Lauren Heading
+	Evan Kohilas attempts a Career kill on Lauren Heading
+	Evan Kohilas has a Agility stat of 10, ([10, 0, 0, 0])
+	Lauren Heading has a Agility stat of 12, ([12, 0, 0, 0])
+	Search Check. Target: 0.5987063256829237, Roll: 0.14750003352849483, Result: Fail
+	Attack Failed, Evan Kohilas could not locate Lauren Heading
+	Recording action Ben Myers Attack Riley Hoolahan
+	Ben Myers attempts an attack on Riley Hoolahan
+	Ben Myers has a Agility stat of 9, ([9, 0, 0, 0])
+	Riley Hoolahan has a Agility stat of 5, ([5, 0, 0, 0])
+	Search Check. Target: 0.10564977366685535, Roll: 0.7829124175754624, Result: Pass
+	Ben Myers has a Strength stat of 8, ([8, 0, 0, 0])
+	Riley Hoolahan has a Defence stat of 9, ([8, 1, 0, 0])
+	Attack Check. Target: 0.5987063256829237, Roll: 0.39990328671104647, Result: Fail
+	Ben Myers has a Defence stat of 10, ([10, 0, 0, 0])
+	Riley Hoolahan has a Strength stat of 10, ([10, 0, 0, 0])
+	Counter Check. Target: 0.7733726476231317, Roll: 0.6000967132889535, Result: Fail
+	Attack Failed, Riley Hoolahan defended against Ben Myers
+	Recording action Lauren McNamara Attack Ben Myers
+	Lauren McNamara attempts an attack on Ben Myers
+	Lauren McNamara has a Agility stat of 6, ([6, 0, 0, 0])
+	Ben Myers has a Agility stat of 9, ([9, 0, 0, 0])
+	Search Check. Target: 0.6914624612740131, Roll: 0.7501507213924318, Result: Pass
+	Lauren McNamara has a Strength stat of 10, ([10, 0, 0, 0])
+	Ben Myers has a Defence stat of 10, ([10, 0, 0, 0])
+	Attack Check. Target: 0.5, Roll: 0.03291566083408004, Result: Fail
+	Lauren McNamara has a Defence stat of 8, ([8, 0, 0, 0])
+	Ben Myers has a Strength stat of 8, ([8, 0, 0, 0])
+	Counter Check. Target: 0.7733726476231317, Roll: 0.96708433916592, Result: Pass
+	Lauren McNamara is now dead
+	Attack Failed, Lauren McNamara was counter killed by Ben Myers
+	Player: Ben Myers attempted to raid from Lauren McNamara, but was unsuccessful as they were not carrying anything
+	Recording action Riley Hoolahan Attack Aretha Peethamparam
+	Riley Hoolahan attempts an attack on Aretha Peethamparam
+	Riley Hoolahan has a Agility stat of 5, ([5, 0, 0, 0])
+	Aretha Peethamparam has a Agility stat of 9, ([7, 1, 0, 1])
+	Search Check. Target: 0.7733726476231317, Roll: 0.8354532486772949, Result: Pass
+	Riley Hoolahan has a Strength stat of 10, ([10, 0, 0, 0])
+	Aretha Peethamparam has a Defence stat of 6, ([3, 1, 2, 0])
+	Attack Check. Target: 0.15865525393145696, Roll: 0.6616026735988539, Result: Pass
+	Aretha Peethamparam is now dead
+	Attack Succeeded, Riley Hoolahan killed Aretha Peethamparam
+	Player: Riley Hoolahan raided a Running Shoes from Aretha Peethamparam
+	Recording action Terry Watson Attack Ben Myers
+	Terry Watson attempts an attack on Ben Myers
+	Terry Watson has a Agility stat of 4, ([4, 0, 0, 0])
+	Ben Myers has a Agility stat of 9, ([9, 0, 0, 0])
+	Search Check. Target: 0.841344746068543, Roll: 0.3689896465006536, Result: Fail
+	Attack Failed, Terry Watson could not locate Ben Myers
+	David Vo used Scout Drone, remaining uses: 0
+	Scout Drone is destroyed
+	Recording action David Vo Follow Lauren Heading
+	David Vo successfully follows Lauren Heading and learns they performed [('Protect', Joel Aquilina)]
+	Michael Cui retrieved Defence Serum
+	Caitlin Bell retrieved Sticky Bombs
+	Shea Bunge retrieved Light Armour
+
+~~~Night 5~~~
+	Alex Rowell used Trap Kit, remaining uses: 1
+	Recording action Alex Rowell Trap Caitlin Bell
+	Alex Rowell successfully trapped Caitlin Bell
+	Lauren Heading used Medpack, remaining uses: 2
+	Recording action Lauren Heading Protect Evan Kohilas
+	Checking for poisoning on Evan Kohilas: 
+	Evan Kohilas was poisoned on Night 5
+	Evan Kohilas has been healed. 
+	Lauren Heading successfully protected Evan Kohilas
+	Caitlin Bell tried to Bomb but cannot as they are Trapped
+	Recording action Hayley van Waas Hide Hayley van Waas
+	Hayley van Waas successfully hides
+	Recording action David Vo Hide David Vo
+	David Vo successfully hides
+	Recording action Joel Aquilina Hide Joel Aquilina
+	Joel Aquilina successfully hides
+	Recording action Riley Hoolahan Hide Riley Hoolahan
+	Riley Hoolahan successfully hides
+	Recording action Shea Bunge Guard Shea Bunge
+	Shea Bunge successfully guards
+	Recording action Maddie Wagner Guard Maddie Wagner
+	Maddie Wagner successfully guards
+	Recording action Evan Kohilas Kill Joel Aquilina
+	Evan Kohilas attempts a Career kill on Joel Aquilina
+	Evan Kohilas has a Agility stat of 11, ([10, 1, 0, 0])
+	Joel Aquilina has a Agility stat of 11, ([6, 1, 4, 0])
+	Search Check. Target: 0.4012936743170763, Roll: 0.9490252610699721, Result: Pass
+	Evan Kohilas has a Strength stat of 14, ([10, 0, 4, 0])
+	Joel Aquilina has a Defence stat of 6, ([5, 1, 0, 0])
+	Attack Check. Target: 0.02275013194817932, Roll: 0.7723968774305092, Result: Pass
+	Joel Aquilina is now dead
+	Attack Succeeded, Evan Kohilas killed Joel Aquilina
+	Player: Evan Kohilas raided a Luck Serum from Joel Aquilina
+	Joel Aquilina dropped [Active Item: Telescope, Uses: 2, Active Item: Strength Serum, Uses: 1]
+	Total dropped items: [Active Item: Medicine, Uses: 1, Active Item: Telescope, Uses: 2, Active Item: Strength Serum, Uses: 1]
+	Andrew Titmuss used Scout Drone, remaining uses: 0
+	Scout Drone is destroyed
+	Recording action Andrew Titmuss Follow Lauren Heading
+	Andrew Titmuss successfully follows Lauren Heading and learns they performed [('Protect', Evan Kohilas)]
+	Alex Rowell retrieved Medicine
+	Mitchell Busby retrieved Running Shoes
+	Michael Cui retrieved Trap
+
+~~~Night 6~~~
+	Alex Rowell used Medicine, remaining uses: 0
+	Medicine is destroyed
+	Recording action Alex Rowell Heal Lauren Heading
+	Alex Rowell successfully healed Lauren Heading
+	Maddie Wagner used Poison Dart, remaining uses: 0
+	Poison Dart is destroyed
+	Recording action Maddie Wagner Poison Alex Rowell
+	Maddie Wagner successfully poisoned Alex Rowell
+	Caitlin Bell used Sticky Bombs, remaining uses: 1
+	Recording action Caitlin Bell Bomb Lauren Heading
+	Caitlin Bell tries to bomb Lauren Heading. Threshold: 0.3, roll: 0.07147256521144507
+	Lauren Heading has dodged an explosion
+	Recording action Evan Kohilas Hide Evan Kohilas
+	Evan Kohilas successfully hides
+	Recording action Lauren Heading Guard Lauren Heading
+	Lauren Heading successfully guards
+	Recording action Bryan Mitchell Guard Bryan Mitchell
+	Bryan Mitchell successfully guards
+	Recording action David Vo Guard David Vo
+	David Vo successfully guards
+	Recording action Terry Watson Kill Riley Hoolahan
+	Terry Watson attempts a Career kill on Riley Hoolahan
+	Terry Watson has a Agility stat of 4, ([4, 0, 0, 0])
+	Riley Hoolahan has a Agility stat of 7, ([5, 1, 0, 1])
+	Search Check. Target: 0.6914624612740131, Roll: 0.5813911815252787, Result: Fail
+	Attack Failed, Terry Watson could not locate Riley Hoolahan
+	Bryan Mitchell retrieved Strength Serum
+	Alex Rowell retrieved Lucky Charm
+	Riley Hoolahan retrieved Broad Sword
+
+~~~Night 7~~~
+	Alex Rowell used Trap Kit, remaining uses: 0
+	Trap Kit is destroyed
+	Recording action Alex Rowell Trap Michael Cui
+	Alex Rowell successfully trapped Michael Cui
+	Lauren Heading used Medpack, remaining uses: 1
+	Recording action Lauren Heading Protect Alex Rowell
+	Alex Rowell was poisoned on Night 7
+	Alex Rowell has been healed of Poisoning.
+	Lauren Heading successfully protected Alex Rowell
+	Recording action Bryan Mitchell Drink Strength Serum Bryan Mitchell
+	Bryan Mitchell used Strength Serum, remaining uses: 0
+	Strength Serum is destroyed
+	Bryan Mitchell successfully drinks Strength Serum
+	Caitlin Bell used Sticky Bombs, remaining uses: 0
+	Sticky Bombs is destroyed
+	Recording action Caitlin Bell Bomb Riley Hoolahan
+	Caitlin Bell tries to bomb Riley Hoolahan. Threshold: 0.3, roll: 0.8554329437278491
+	Riley Hoolahan is now dead
+	Riley Hoolahan has been killed in an explosion
+	The following items were destroyed [Passive Item: Running Shoes, Passive Item: Broad Sword]
+	Recording action Maddie Mackey Hide Maddie Mackey
+	Maddie Mackey successfully hides
+	Recording action Maxwell Hajncl Guard Maxwell Hajncl
+	Maxwell Hajncl successfully guards
+	Michael Cui tried to Guard but cannot as they are Trapped
+	Riley Hoolahan tried to Guard but cannot as they are Dead
+	Recording action Bryan Mitchell Attack Mitchell Busby
+	Bryan Mitchell attempts an attack on Mitchell Busby
+	Bryan Mitchell has a Agility stat of 12, ([11, 1, 0, 0])
+	Mitchell Busby has a Agility stat of 13, ([13, 0, 0, 0])
+	Search Check. Target: 0.5, Roll: 0.5582343873714024, Result: Pass
+	Bryan Mitchell has a Strength stat of 6, ([3, 0, 2, 1])
+	Mitchell Busby has a Defence stat of 7, ([7, 0, 0, 0])
+	Attack Check. Target: 0.5987063256829237, Roll: 0.5228067928925573, Result: Fail
+	Bryan Mitchell has a Defence stat of 6, ([6, 0, 0, 0])
+	Mitchell Busby has a Strength stat of 6, ([3, 1, 0, 2])
+	Counter Check. Target: 0.7733726476231317, Roll: 0.47719320710744273, Result: Fail
+	Attack Failed, Mitchell Busby defended against Bryan Mitchell
+	Recording action Evan Kohilas Kill Lauren Heading
+	Evan Kohilas attempts a Career kill on Lauren Heading
+	Evan Kohilas has a Agility stat of 10, ([10, 0, 0, 0])
+	Lauren Heading has a Agility stat of 12, ([12, 0, 0, 0])
+	Search Check. Target: 0.5987063256829237, Roll: 0.16470053882166036, Result: Fail
+	Attack Failed, Evan Kohilas could not locate Lauren Heading
+	Recording action David Vo Attack Caitlin Bell
+	David Vo attempts an attack on Caitlin Bell
+	David Vo has a Agility stat of 9, ([9, 1, 0, -1])
+	Caitlin Bell has a Agility stat of 5, ([4, 1, 0, 0])
+	Search Check. Target: 0.10564977366685535, Roll: 0.781308659045637, Result: Pass
+	David Vo has a Strength stat of 4, ([4, 0, 0, 0])
+	Caitlin Bell has a Defence stat of 11, ([10, 1, 0, 0])
+	Attack Check. Target: 0.9599408431361829, Roll: 0.3395242834884873, Result: Fail
+	David Vo has a Defence stat of 12, ([10, 0, 0, 2])
+	Caitlin Bell has a Strength stat of 8, ([7, 1, 0, 0])
+	Counter Check. Target: 0.9599408431361829, Roll: 0.6604757165115127, Result: Fail
+	Attack Failed, Caitlin Bell defended against David Vo
+	Bryan Mitchell retrieved Heavy Armour
+	Alex Rowell retrieved Sticky Bombs
+	Mitchell Busby retrieved Agility Serum
+
+~~~Day 8~~~
+	Maxwell Hajncl is now dead
+	Maxwell Hajncl dropped []
+	Total dropped items: [Active Item: Medicine, Uses: 1, Active Item: Telescope, Uses: 2, Active Item: Strength Serum, Uses: 1, Passive Item: Light Armour]
+	Maxwell Hajncl Has been Lynched on Day 8
+~~~Night 8~~~
+	Alex Rowell used Sticky Bombs, remaining uses: 1
+	Recording action Alex Rowell Bomb Bryan Mitchell
+	Alex Rowell tries to bomb Bryan Mitchell. Threshold: 0.3, roll: 0.9301973586685498
+	Bryan Mitchell is now dead
+	Bryan Mitchell has been killed in an explosion
+	The following items were destroyed [Passive Item: Dagger, Passive Item: Heavy Armour]
+	Recording action Lauren Heading Hide Lauren Heading
+	Lauren Heading successfully hides
+	Bryan Mitchell tried to Hide but cannot as they are Dead
+	Recording action Michael Cui Hide Michael Cui
+	Michael Cui successfully hides
+	Recording action Evan Kohilas Kill Lauren Heading
+	Evan Kohilas attempts a Career kill on Lauren Heading
+	Evan Kohilas has a Agility stat of 10, ([10, 0, 0, 0])
+	Lauren Heading has a Agility stat of 16, ([12, 0, 4, 0])
+	Search Check. Target: 0.6914624612740131, Roll: 0.004633797930701733, Result: Fail
+	Attack Failed, Evan Kohilas could not locate Lauren Heading
+	Hayley van Waas tried to attack Bryan Mitchell, but failed as the target is already dead
+	Recording action Terry Watson Attack David Vo
+	Terry Watson attempts an attack on David Vo
+	Terry Watson has a Agility stat of 4, ([4, 0, 0, 0])
+	David Vo has a Agility stat of 9, ([9, 1, 0, -1])
+	Search Check. Target: 0.5987063256829237, Roll: 0.4527239749717814, Result: Fail
+	Attack Failed, Terry Watson could not locate David Vo
+	Alex Rowell retrieved Defence Serum
+	Terry Watson retrieved Poison Dart
+	Caitlin Bell retrieved Trap
+
+~~~Day 9~~~
+	Michael Cui is now dead
+	Michael Cui dropped [Passive Item: Lucky Charm, Active Item: Defence Serum, Uses: 1, Active Item: Trap, Uses: 1]
+	Total dropped items: [Active Item: Medicine, Uses: 1, Active Item: Telescope, Uses: 2, Active Item: Strength Serum, Uses: 1, Passive Item: Light Armour, Passive Item: Lucky Charm, Active Item: Defence Serum, Uses: 1, Active Item: Trap, Uses: 1]
+	Michael Cui Has been Lynched on Day 9
+~~~Feast ~~~
+	Andrew Titmuss retrieved new item Lucky Sword
+	Lauren Heading retrieved new item Lucky Armour
+	Andrew Titmuss retrieved Trap
+	David Vo retrieved Defence Serum
+	Hayley van Waas retrieved Lucky Charm
+	Evan Kohilas retrieved Light Armour
+	Alex Rowell retrieved Strength Serum
+	Lauren Heading retrieved Telescope
+	Maddie Mackey retrieved Medicine
+	Cornucopia Combat Evan Kohilas vs Andrew Titmuss
+	Evan Kohilas has a Strength stat of 11, ([10, 1, 0, 0])
+	Andrew Titmuss has a Defence stat of 11, ([10, 1, 0, 0])
+	Attack Check. Target: 0.4012936743170763, Roll: 0.5324887816869829, Result: Pass
+	Andrew Titmuss is now dead
+	Attack Succeeded, Evan Kohilas killed Andrew Titmuss
+	Player: Evan Kohilas raided a Trap from Andrew Titmuss
+	Andrew Titmuss dropped [Passive Item: Lucky Sword]
+	Total dropped items: [Passive Item: Lucky Sword]
+	Cornucopia Combat Alex Rowell vs David Vo
+	Alex Rowell has a Strength stat of 5, ([4, 1, 0, 0])
+	David Vo has a Defence stat of 12, ([10, 0, 0, 2])
+	Attack Check. Target: 0.9331927987311419, Roll: 0.6499550003072354, Result: Fail
+	Alex Rowell has a Defence stat of 9, ([8, 0, 0, 1])
+	David Vo has a Strength stat of 4, ([4, 0, 0, 0])
+	Counter Check. Target: 0.9599408431361829, Roll: 0.3500449996927646, Result: Fail
+	Attack Failed, David Vo defended against Alex Rowell
+~~~Night 9~~~
+	Recording action Alex Rowell Drink Defence Serum Alex Rowell
+	Alex Rowell used Defence Serum, remaining uses: 0
+	Defence Serum is destroyed
+	Alex Rowell successfully drinks Defence Serum
+	Terry Watson used Poison Dart.
+	Recording action Terry Watson Poison Andrew Titmuss
+	Terry Watson tried to poison Andrew Titmuss but failed as the target is already dead
+	Recording action David Vo Hide David Vo
+	David Vo successfully hides
+	Recording action Alex Rowell Guard Alex Rowell
+	Alex Rowell successfully guards
+	Recording action Mitchell Busby Attack Evan Kohilas
+	Mitchell Busby attempts an attack on Evan Kohilas
+	Mitchell Busby has a Agility stat of 14, ([13, 1, 0, 0])
+	Evan Kohilas has a Agility stat of 10, ([10, 0, 0, 0])
+	Search Check. Target: 0.02275013194817932, Roll: 0.40409468785871294, Result: Pass
+	Mitchell Busby has a Strength stat of 6, ([3, 1, 0, 2])
+	Evan Kohilas has a Defence stat of 6, ([5, 0, 0, 1])
+	Attack Check. Target: 0.4012936743170763, Roll: 0.054516539995146496, Result: Fail
+	Mitchell Busby has a Defence stat of 7, ([7, 0, 0, 0])
+	Evan Kohilas has a Strength stat of 11, ([10, 1, 0, 0])
+	Counter Check. Target: 0.3085375387259869, Roll: 0.9454834600048535, Result: Pass
+	Mitchell Busby is now dead
+	Attack Failed, Mitchell Busby was counter killed by Evan Kohilas
+	Player: Evan Kohilas raided a Broad Sword from Mitchell Busby
+	Mitchell Busby dropped [Passive Item: Running Shoes, Active Item: Agility Serum, Uses: 1]
+	Total dropped items: [Passive Item: Lucky Sword, Passive Item: Running Shoes, Active Item: Agility Serum, Uses: 1]
+	Recording action Evan Kohilas Kill Lauren Heading
+	Evan Kohilas attempts a Career kill on Lauren Heading
+	Evan Kohilas has a Agility stat of 10, ([10, 1, 0, -1])
+	Lauren Heading has a Agility stat of 12, ([12, 0, 0, 0])
+	Search Check. Target: 0.3085375387259869, Roll: 0.9660282196436997, Result: Pass
+	Evan Kohilas has a Strength stat of 16, ([10, 0, 4, 2])
+	Lauren Heading has a Defence stat of 7, ([5, 0, 0, 2])
+	Attack Check. Target: 0.006209665325776159, Roll: 0.24832057994358858, Result: Pass
+	Lauren Heading is now dead
+	Attack Succeeded, Evan Kohilas killed Lauren Heading
+	Player: Evan Kohilas raided a Telescope from Lauren Heading
+	Lauren Heading dropped [Active Item: Medpack, Uses: 1, Active Item: Trap, Uses: 1, Passive Item: Lucky Armour]
+	Total dropped items: [Passive Item: Lucky Sword, Passive Item: Running Shoes, Active Item: Agility Serum, Uses: 1, Active Item: Medpack, Uses: 1, Active Item: Trap, Uses: 1, Passive Item: Lucky Armour]
+	Recording action Hayley van Waas Attack Evan Kohilas
+	Hayley van Waas attempts an attack on Evan Kohilas
+	Hayley van Waas has a Agility stat of 9, ([8, 1, 0, 0])
+	Evan Kohilas has a Agility stat of 9, ([10, 0, 0, -1])
+	Search Check. Target: 0.15865525393145696, Roll: 0.59082430034558, Result: Pass
+	Hayley van Waas has a Strength stat of 4, ([3, 0, 0, 1])
+	Evan Kohilas has a Defence stat of 7, ([5, 1, 0, 1])
+	Attack Check. Target: 0.6914624612740131, Roll: 0.20462183698627212, Result: Fail
+	Hayley van Waas has a Defence stat of 11, ([10, 1, 0, 0])
+	Evan Kohilas has a Strength stat of 12, ([10, 0, 0, 2])
+	Counter Check. Target: 0.5987063256829237, Roll: 0.7953781630137279, Result: Pass
+	Hayley van Waas is now dead
+	Attack Failed, Hayley van Waas was counter killed by Evan Kohilas
+	Player: Evan Kohilas raided a Lucky Charm from Hayley van Waas
+	Hayley van Waas dropped [Passive Item: Dagger, Active Item: Agility Serum, Uses: 1]
+	Total dropped items: [Passive Item: Lucky Sword, Passive Item: Running Shoes, Active Item: Agility Serum, Uses: 1, Active Item: Medpack, Uses: 1, Active Item: Trap, Uses: 1, Passive Item: Lucky Armour, Passive Item: Dagger, Active Item: Agility Serum, Uses: 1]
+	Caitlin Bell tried to attack Hayley van Waas, but failed as the target is already dead
+
+~~~Day 10~~~
+	No Lynch Target for Day 10
+~~~Night 10~~~
+	Recording action Alex Rowell Drink Strength Serum Alex Rowell
+	Alex Rowell used Strength Serum, remaining uses: 0
+	Strength Serum is destroyed
+	Alex Rowell successfully drinks Strength Serum
+	Recording action Evan Kohilas Drink Luck Serum Evan Kohilas
+	Evan Kohilas used Luck Serum, remaining uses: 0
+	Luck Serum is destroyed
+	Evan Kohilas successfully drinks Luck Serum
+	Alex Rowell used Sticky Bombs, remaining uses: 0
+	Sticky Bombs is destroyed
+	Recording action Alex Rowell Bomb Caitlin Bell
+	Alex Rowell tries to bomb Caitlin Bell. Threshold: 0.3, roll: 0.09946926458635497
+	Caitlin Bell has dodged an explosion
+	Recording action David Vo Guard David Vo
+	David Vo successfully guards
+	Recording action Evan Kohilas Attack David Vo
+	Evan Kohilas attempts an attack on David Vo
+	Evan Kohilas has a Agility stat of 9, ([10, 0, 0, -1])
+	David Vo has a Agility stat of 9, ([9, 1, 0, -1])
+	Search Check. Target: 0.15865525393145696, Roll: 0.12470325879952782, Result: Fail
+	Attack Failed, Evan Kohilas could not locate David Vo
+	Recording action Maddie Mackey Attack Evan Kohilas
+	Maddie Mackey attempts an attack on Evan Kohilas
+	Maddie Mackey has a Agility stat of 7, ([7, 0, 0, 0])
+	Evan Kohilas has a Agility stat of 10, ([10, 1, 0, -1])
+	Search Check. Target: 0.4012936743170763, Roll: 0.24015693275282846, Result: Fail
+	Attack Failed, Maddie Mackey could not locate Evan Kohilas
+	Recording action Caitlin Bell Attack Maddie Mackey
+	Caitlin Bell attempts an attack on Maddie Mackey
+	Caitlin Bell has a Agility stat of 4, ([4, 0, 0, 0])
+	Maddie Mackey has a Agility stat of 7, ([7, 0, 0, 0])
+	Search Check. Target: 0.4012936743170763, Roll: 0.06054560151236976, Result: Fail
+	Attack Failed, Caitlin Bell could not locate Maddie Mackey
+	Recording action Terry Watson Kill Alex Rowell
+	Terry Watson attempts a Career kill on Alex Rowell
+	Terry Watson has a Agility stat of 4, ([4, 0, 0, 0])
+	Alex Rowell has a Agility stat of 11, ([10, 1, 0, 0])
+	Search Check. Target: 0.7733726476231317, Roll: 0.8073887519722761, Result: Pass
+	Terry Watson has a Strength stat of 13, ([9, 0, 4, 0])
+	Alex Rowell has a Defence stat of 10, ([8, 1, 0, 1])
+	Attack Check. Target: 0.15865525393145696, Roll: 0.712886327855364, Result: Pass
+	Alex Rowell is now dead
+	Attack Succeeded, Terry Watson killed Alex Rowell
+	Player: Terry Watson raided a Lucky Charm from Alex Rowell
+	Alex Rowell dropped [Passive Item: Light Armour]
+	Total dropped items: [Passive Item: Lucky Sword, Passive Item: Running Shoes, Active Item: Agility Serum, Uses: 1, Active Item: Medpack, Uses: 1, Active Item: Trap, Uses: 1, Passive Item: Lucky Armour, Passive Item: Dagger, Active Item: Agility Serum, Uses: 1, Passive Item: Light Armour]
+
+~~~Day 12~~~
+	Maddie Mackey is now dead
+	Maddie Mackey dropped [Active Item: Medicine, Uses: 1]
+	Total dropped items: [Passive Item: Lucky Sword, Passive Item: Running Shoes, Active Item: Agility Serum, Uses: 1, Active Item: Medpack, Uses: 1, Active Item: Trap, Uses: 1, Passive Item: Lucky Armour, Passive Item: Dagger, Active Item: Agility Serum, Uses: 1, Passive Item: Light Armour, Passive Item: Heavy Armour, Active Item: Defence Serum, Uses: 1, Active Item: Medicine, Uses: 1]
+	Maddie Mackey Has been Lynched on Day 12
+~~~Night 12~~~
+	THE FINAL SHOWDOWN!
+	Evan Kohilas has a Strength stat of 12, ([10, 0, 0, 2])
+	Caitlin Bell has a Defence stat of 11, ([10, 1, 0, 0])
+	Attack Check. Target: 0.3085375387259869, Roll: 0.653126615899237, Result: Pass
+	Round 1, Evan Kohilas lives: 3, Caitlin Bell lives: 2
+	Caitlin Bell has a Strength stat of 8, ([7, 1, 0, 0])
+	Evan Kohilas has a Defence stat of 6, ([5, 0, 0, 1])
+	Attack Check. Target: 0.22662735237686826, Roll: 0.5387377198914641, Result: Pass
+	Round 2, Evan Kohilas lives: 2, Caitlin Bell lives: 2
+	Evan Kohilas has a Strength stat of 13, ([10, 1, 0, 2])
+	Caitlin Bell has a Defence stat of 11, ([10, 1, 0, 0])
+	Attack Check. Target: 0.22662735237686826, Roll: 0.10647941504495129, Result: Fail
+	Evan Kohilas has a Defence stat of 6, ([5, 0, 0, 1])
+	Caitlin Bell has a Strength stat of 8, ([7, 1, 0, 0])
+	Counter Check. Target: 0.5, Roll: 0.8935205849550487, Result: Pass
+	Round 3, Evan Kohilas lives: 1, Caitlin Bell lives: 2
+	Caitlin Bell has a Strength stat of 8, ([7, 1, 0, 0])
+	Evan Kohilas has a Defence stat of 6, ([5, 0, 0, 1])
+	Attack Check. Target: 0.22662735237686826, Roll: 0.6030253378036452, Result: Pass
+	Round 4, Evan Kohilas lives: 0, Caitlin Bell lives: 2
+	Caitlin Bell Wins the Hunger Games!!!
+	Evan Kohilas is now dead
+	

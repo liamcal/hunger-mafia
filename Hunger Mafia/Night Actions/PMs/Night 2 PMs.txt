@@ -1,0 +1,49 @@
+Night 2
+
+Joel Acquilina, you use the telescope to successfully invesitgate Rachel Alger!
+	You learn that Rachel Alger is a Career.
+	You learn that Rachel Alger's stats are: {Strength: 9, Agility: 13, Defence: 4, Luck: 4}
+	Telescope - Remaining Uses: 3
+
+A sponsor has sent you a Luck Serum!
+Luck Serum - Active Item, Boosts: +2 Luck (Temporary), Uses: 1
+	A sparkling red liquid sealed inside a small glass vial.
+	On any night, as well as performing a basic action, you may also choose to use this item on yourself. The Luck Serum will give you a temporary +2 boost to your Luck stat for the remainder of the night.
+
+David Vo, a sponsor has sent you a Scout Drone!
+Scout Drone - Active Item, Ability: Follow, Uses: 1
+	A small remote-controlled drone fitted with a camera and live video feed.
+	On any night, instead of performing a basic action, you may choose to use this item on any player. 
+	You will follow that player with the item and observe their actions for the night.
+
+Lauren Heading, a sponsor has sent you a Trap!
+Trap - Active Item, Ability: Trap, Uses: 1
+	An intricate contraptions to incapacitate another Tribute. 
+	On any night, instead of performing a basic action, you may instead choose to use this item on any other player. That player will be "Trapped" for the night, and will be unable to perform any actions.
+
+You have received a note from your district partner!
+	"If I 💀, lynch Shane. ∃ possibility that Mafia expected this response, but this is probably best lead"
+
+Deanna Arora, you engage in combat with Lauren McNamara!
+	She successfully blocks your attack. However you are unable to block her counter-attack. You have been killed.
+	RIP
+
+Lauren McNamara, you are engaged in combat by Deanna Arora!
+	You successfully blocks her attack. However she is unable to block your counter-attack. You successfully kill her.
+
+
+Evan Kohilas, you attempt to engage in combat with Mitchell Busby!
+	However you are unable to locate him. 
+
+Terry Watson, you attempt to engage in combat with Aretha Peethamparam!
+	However you are unable to locate her. 
+
+
+Rachel Alger, you have received a note from your district partner!
+	 "I know who you are"
+
+Michael Cui, you have received a note from your district partner!
+	 "I have a healing pack. I'm not sure if you can pick it up when I die, but if I do... Come find it."
+
+Robbie Collins, you have received a note from your district partner!
+	 "nah m8 im on the level, no one special"

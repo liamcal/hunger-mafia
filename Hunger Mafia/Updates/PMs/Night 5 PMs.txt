@@ -1,0 +1,55 @@
+Night 5
+
+Joel Aquilina, you are engaged in combat by Evan Kohilas!
+	You are unable to block his attack, and he kills you.
+	RIP
+
+Evan Kohilas, you engage in combat with Joel Aquilina!
+	His is unable to block your attack, and you successfully kill him.
+	You raid a Luck Serum from his body.
+Luck Serum - Active Item, Boosts: +2 Luck (Temporary), Uses: 1
+	A sparkling red liquid sealed inside a small glass vial.
+	On any night, as well as performing a basic action, you may also choose to use this item on yourself. The Luck Serum will give you a temporary +2 boost to your Luck stat for the remainder of the night.
+During the night, you another Tribute leaves you a vial of medicine, which cures you of your poison!
+
+
+Caitlin Bell, you attempt to use a Grenade on Riley Hoolahan. 
+	However you accidentally step into a trap, which incapicitates you for the night.
+	You were unable to perform any actions tonight. 
+	You may still attempt to you the Grenade on a later night.
+	Grenades - Remaining Uses: 2
+You have received a note from your district partner!
+	"HECK who is this to? R u career? Hoi. I'm DALS. No items, u? Have a good night. M"
+
+
+Andrew Titmuss, you use your Scout Drone to follow Lauren Heading!
+	You observe them Protecting Evan Kohilas.
+
+
+Alex Rowell, you successfully use your Trap Kit on Caitlin Bell!
+	Trap Kit, Remaining Uses: 1
+A sponsor has sent you a vial of Medicine!
+Medicine - Active Item, Ability: Heal, Uses: 1
+	A single use vial of foul smelling medicine. It is capable of healing any wounds, provided you can put up with the stink.
+	On any night, instead of performing a basic action, you may choose to use this item on any player. That player will be unable to be killed during the Night phase.
+
+
+Mitchell Busby, a sponsor has sent you a pair of Running Shoes!
+Running Shoes - Passive Item, Bonuses: +1 Agility
+	An extremely comfortable and well-fitting pair of bright red running shoes. Red makes everything go faster, including you.
+	While in your possession, this item grants a permanent +1 boost to your Agility score.
+
+
+Michael Cui, a sponsor has sent you a Trap!
+Trap - Active Item, Ability: Trap, Uses: 1
+	An intricate contraptions to incapacitate another Tribute. 
+	On any night, instead of performing a basic action, you may instead choose to use this item on any other player. That player will be "Trapped" for the night, and will be unable to perform any actions.
+
+
+
+Bryan Mitchell, you have received a note from your district partner!
+	"I feel like Hayley and Caitlin are sus, they've been lurking... What do you think?"
+
+
+Terry Watson, you have received a note from your district partner!
+	 "sup Terry, how's it going?"
