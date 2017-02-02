@@ -626,8 +626,15 @@ class CombatOutcome:
     countered_protected = -2
 
 class Game:
+    """
+    Monitor game state and a collection of players
+    Simulate and process night actions and player interactions
+    """
 
     def __init__(self, name = "game"):
+        """
+        Create a new game object with required properties
+        """
         self.current_phase = 0
         self.game_name = name
         self.players = {}
@@ -635,106 +642,238 @@ class Game:
         self.careers = []
         self.night_actions = {}
         self.action_priotities = {"Serum" : -10, "Trap" : -5, "Heal" : -1, "Protect" : -1, "Investigate" : -1, "Bomb" : - 1, "Poison" : -1, "Hide" : 1, "Guard" : 2, "Attack" : 3, "Kill": 3, "Follow" : 5}
-        self.cooldown_actions = {"Attack", "Guard", "Hide"}
+        self.cooldown_actions = {"Attack", "Guard", "Hide"} #This actions have a cooldown
         self.dropped_items = []
 
+
     def set_phase(self, phase):
+        """
+        Set the current game phase and update random seed
+        """
+        if phase >= len(SEEDS):
+            raise ValueError("Phase number too high - Not enough Seeds")
         self.current_phase = phase
         random.seed(SEEDS[self.current_phase])
 
+
     def get_action_priority(self, action):
+        """
+        Retrieve the priority of a given action
+        Defaults to 0
+        Lower numbers go first
+        """
         return self.action_priotities[action] if action in self.action_priotities else 0
 
+
     def get_players_from_csv(self, path):
+        """
+        Create a collection of players from a CSV file
+        Players must already exist
+        """
         with open(path) as f:
             rdr = csv.DictReader(f)
             retrieved_players = [self.get_player_by_name(line["Name"]) for line in rdr]
             return retrieved_players
 
+
     def get_players(self):
+        """
+        Retrieve useful representation of players
+        """
         return sorted(list(self.players.values()), key = lambda x: x.id)
 
+
     def get_living_players(self):
+        """
+        Retrieve list of all living players
+        """
         return [p for p in self.get_players() if p.is_alive]
 
-    def get_player_by_name(self, name):
-        return self.players[name]
 
+    def get_player_by_name(self, name):
+        """
+        Retrieve player object by name
+        Fails if no player of that name exists
+        """
+        try:
+            player = self.players[name]
+        except KeyError:
+            raise ValueError("Player {} doesn't exist".format(name))
+        return player
     def set_careers(self, *names):
         for name in names:
             cur_player = self.get_player_by_name(name)
             cur_player.is_career = True
             self.careers.append(cur_player)
 
+
     def create_players_from_responses(self, path):
+        """
+        Create each player from CSV containing names and stat preferences
+        """
         with open(path) as f:
             rdr = csv.DictReader(f)
+            #Each player is on a new line
             for i, line in enumerate(rdr):
                 current_info = line
                 current_preferences = {}
+                #Record their preferences
                 for stat in line:
                     n = line[stat]
                     if n in '012':
                         current_preferences[int(n)] = stat
+                #Create the new player
                 p = Player(current_info['Name'], current_preferences, True if line['Bonus'] == 'T' else False)
+                #Set ID and district
                 p.id = i
                 p.district = (i // 2) + 1
+                #Store player
                 self.players[p.name] = p
 
 
     def create_days_items(self, day):
+        """
+        Create items to be distributed as sponsor gifts
+        Items to be created are read from csv file
+        """
         with open("ItemDrops.csv") as f:
             lines = list(csv.DictReader(f))
-        line = [line for line in lines if line["Day"] == str(day)]
-        if len(line) > 1:
+
+        #Get current items
+        line = [l for l in lines if l["Day"] == str(day)]
+        if len(line) > 1: #Should only be one entry per day
             raise ValueError("More than one entry for Day {}".format(day))
         elif len(line) == 1:
-            line = line[0]
+            line = line[0] #Get first (and only) entry
             new_items = [items.create_item(s) for s in line["Items"].split()]
-
             return new_items
         else:
-            return []
-
-    def assign_items_to_players(self, recipients, items, day):
-        ###This only records a day at a time, should really have made this
-        with open("Item_Assignments.csv", 'w', newline='') as f:
-            wrt = csv.DictWriter(f, ["Player", "Item"])
-            wrt.writeheader()
-            for index, item in enumerate(items):
-                recipients[index].add_item(item)
-                print("{} retrieved {}". format(recipients[index].name, item.name))
-                wrt.writerow({"Player": recipients[index].name, "Item": item.name})
+            return [] #No items for you
 
     def distribute_sponsor_items(self, day):
+        """
+        Determine who gets each of the day's sponsor items
+        """
         sponsor_items = self.create_days_items(day)
         random.shuffle(sponsor_items)
         recipients = self.stat_based_selection(selection_players = self.get_living_players(), selection_stats = ['Luck'], positive = True, n = len(sponsor_items))
         self.assign_items_to_players(recipients, sponsor_items, day)
 
 
-    def run_feast(self, feast_players):
+    def assign_items_to_players(self, recipients, items, day):
+        """
+        Add sponsor items to selecter players' inventory
+        Record the results as csv, but always saves to the same file *facepalm*
+        It should really append...
+        """
+        with open("Item_Assignments.csv", 'w', newline='') as f: #TODO Append...
+            wrt = csv.DictWriter(f, ["Player", "Item"])
+            wrt.writeheader()
+            for index, item in enumerate(items):
+                #Give one item to each player
+                recipients[index].add_item(item)
+                print("{} retrieved {}". format(recipients[index].name, item.name))
+                wrt.writerow({"Player": recipients[index].name, "Item": item.name})
 
+    def run_cornucopia(self, cornucopia_players):
+        """
+        Simulate the Cornucopia at the start of the game
+        Players receive items based on combined Luck & Agility
+        Afterwards, some players engage in combat
+        """
+        print("Running Cornucopia:", cornucopia_players)
+        with open("Cornucopia_results.csv", 'w', newline='') as f:
+            wrt = csv.DictWriter(f, ["Player", "Action", "Target", "Result"])
+            wrt.writeheader()
+
+            #Create cornucopia items
+            available = self.create_days_items(0)
+            random.shuffle(available)
+
+            #Sort based on combined Luck + Agility
+            ranked_players = sorted(cornucopia_players, reverse = True, key = lambda x : x.stats['Luck'] + x.stats['Agility'])
+
+            #Assign items to highet ranked players
+            for index, item in enumerate(available):
+                ranked_players[index].add_item(item)
+                print("{} retrieved {}". format(ranked_players[index].name, item.name))
+                wrt.writerow({"Player": ranked_players[index].name, "Action": "receives", "Target": item.name })
+
+            ### Run cornucopia combat
+
+            #Determine number of combats
+            n_combats = len(cornucopia_players) // 7
+
+            for c in range(n_combats):
+                #Randomly pick two players to fight, lower Luck & Agility more likely to fight
+                p1, p2 = self.stat_based_selection(selection_players = cornucopia_players, selection_stats = ['Luck', 'Agility'], positive = False, n = 2)
+                while p1.is_career and p2.is_career:  #Careers shouldnd't fight each other
+                    p1, p2 = self.stat_based_selection(selection_players = cornucopia_players, selection_stats = ['Luck', 'Agility'], positive = False, n = 2)
+                p1a, p2a = p1.get_stat('Agility'), p2.get_stat("Agility")
+
+                #Faster player goes on the attack (generally better even if you have low strength)
+                if p1a > p2a:
+                    attacking = p1
+                    defending = p2
+                #break ties based on when you submitted
+                elif p1a == p2a:
+                    if cornucopia_players.index(p1) > cornucopia_players.index(p2):
+                        attacking = p1
+                        defencing = p2
+                    else:
+                        attacking = p2
+                        defending = p1
+                else:
+                    attacking = p2
+                    defending = p1
+
+                print("Cornucopia Combat {} vs {}".format(attacking.name, defending.name))
+
+                #Run combat and evaluate outcome
+                combat_res = attacking.combat(defending)
+
+                if combat_res == CombatOutcome.success:
+                    attacking.raid(defending)
+                    self.player_item_drop(defending)
+                    outcome = "Success"
+                elif combat_res == CombatOutcome.countered:
+                    defending.raid(attacking)
+                    self.player_item_drop(attacking)
+                    outcome = "Countered"
+                elif combat_res == CombatOutcome.failed:
+                    outcome = "Failed"
+
+                wrt.writerow({"Player": attacking.name, "Action": "attacks", "Target": defending.name, "Result": outcome })
+
+    def run_feast(self, feast_players):
+        """
+        Simulate Feast events
+        Similar process to Cornucopia, item assignments and then combat
+        """
         random.seed(SEEDS[-1]) #Feast uses different seed to night
+
+        #Create special feast items
         new_items = self.create_days_items(-1)
-        players_retrieved_item = self.stat_based_selection(selection_players = feast_players, selection_stats = ['Luck', 'Agility'], positive = True, n = len(new_items))
+
+        #Determine who gets the new (powerful) items based on Luck & Agility
+        players_retrieving_item = self.stat_based_selection(selection_players = feast_players, selection_stats = ['Luck', 'Agility'], positive = True, n = len(new_items))
 
         with open("Feast_results.csv", 'w', newline='') as f:
             wrt = csv.DictWriter(f, ["Player", "Action", "Target", "Result"])
             wrt.writeheader()
 
-
+            #Assign the new items
             for index, item in enumerate(new_items):
-                players_retrieved_item[index].add_item(item)
+                players_retrieving_item[index].add_item(item)
+                print("{} retrieved new item {}". format(players_retrieving_item[index].name, item.name))
+                wrt.writerow({"Player": players_retrieving_item[index].name, "Action": "receives", "Target": item.name })
 
-                print("{} retrieved new item {}". format(players_retrieved_item[index].name, item.name))
-                wrt.writerow({"Player": players_retrieved_item[index].name, "Action": "receives", "Target": item.name })
-
-
+            #Now determine who gets the remainder of the dropped items
             ranked_players = self.stat_based_selection(selection_players = feast_players, selection_stats = ['Luck', 'Agility'], positive = True, n = len(feast_players))
             while self.dropped_items:
-                if not ranked_players:
+                if not ranked_players: #Regenerate player list of more items than players
                     ranked_players = self.stat_based_selection(selection_players = feast_players, selection_stats = ['Luck', 'Agility'], positive = True, n = len(feast_players))
+                #Assign next item to next player
                 cur_player = ranked_players.pop(0)
                 cur_item = self.dropped_items.pop()
                 cur_player.add_item(cur_item)
@@ -743,8 +882,10 @@ class Game:
                 wrt.writerow({"Player": cur_player.name, "Action": "receives", "Target": cur_item.name })
 
             ###FEAST COMBAT
-            n_combats = 2
+
+            n_combats = 2 #Constant as late game
             has_fought = set()
+            #This is the same as Cornucopia
             for c in range(n_combats):
                 p1, p2 = self.stat_based_selection(selection_players = feast_players, selection_stats = ['Luck', 'Agility'], positive = False, n = 2)
                 while p1.is_career and p2.is_career or p1 in has_fought or p2 in has_fought:  #Careers shouldnd't fight each other, and one fight per person
@@ -789,64 +930,6 @@ class Game:
 
         random.seed(SEEDS[self.current_phase]) #Restore the seed to normal
 
-    def run_cornucopia(self, cornucopia_players):
-        print("Running Cornucopia:", cornucopia_players)
-        with open("Cornucopia_results.csv", 'w', newline='') as f:
-            wrt = csv.DictWriter(f, ["Player", "Action", "Target", "Result"])
-            wrt.writeheader()
-
-            available = self.create_days_items(0)
-            random.shuffle(available)
-
-            ranked_players = sorted(cornucopia_players, reverse = True, key = lambda x : x.stats['Luck'] + x.stats['Agility'])
-            for index, item in enumerate(available):
-                ranked_players[index].add_item(item)
-
-                print("{} retrieved {}". format(ranked_players[index].name, item.name))
-                wrt.writerow({"Player": ranked_players[index].name, "Action": "receives", "Target": item.name })
-
-            ### Run cornucopia combat
-            n_combats = len(cornucopia_players) // 7
-
-            for c in range(n_combats):
-                p1, p2 = self.stat_based_selection(selection_players = cornucopia_players, selection_stats = ['Luck', 'Agility'], positive = False, n = 2)
-                while p1.is_career and p2.is_career:  #Careers shouldnd't fight each other
-                    p1, p2 = self.stat_based_selection(selection_players = cornucopia_players, selection_stats = ['Luck', 'Agility'], positive = False, n = 2)
-                p1a, p2a = p1.get_stat('Agility'), p2.get_stat("Agility")
-
-                #Faster player goes on the attack (generally better even if you have low strength)
-                if p1a > p2a:
-                    attacking = p1
-                    defending = p2
-                #break ties based on when you submitted
-                elif p1a == p2a:
-                    if cornucopia_players.index(p1) > cornucopia_players.index(p2):
-                        attacking = p1
-                        defencing = p2
-                    else:
-                        attacking = p2
-                        defending = p1
-                else:
-                    attacking = p2
-                    defending = p1
-
-                print("Cornucopia Combat {} vs {}".format(attacking.name, defending.name))
-
-
-                combat_res = attacking.combat(defending)
-
-                if combat_res == CombatOutcome.success:
-                    attacking.raid(defending)
-                    self.player_item_drop(defending)
-                    outcome = "Success"
-                elif combat_res == CombatOutcome.countered:
-                    defending.raid(attacking)
-                    self.player_item_drop(attacking)
-                    outcome = "Countered"
-                elif combat_res == CombatOutcome.failed:
-                    outcome = "Failed"
-
-                wrt.writerow({"Player": attacking.name, "Action": "attacks", "Target": defending.name, "Result": outcome })
 
     def final_battle(self, player1, player2, lives = 3):
         player1.battle_lives = player2.battle_lives = lives
@@ -1122,15 +1205,6 @@ def write_player_file(path, player_dicts):
                     target = self.get_player_by_name(current_action["Target"])
 
                     return player.perform_item_action(target, action)
-
-
-
-
-
-
-        #TODO Finish
-
-
 
 
 
