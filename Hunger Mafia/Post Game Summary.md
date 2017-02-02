@@ -105,6 +105,13 @@ I'm going to give a quick overview of the actual actions and then make some brie
 - Evan attacks Quinn, and kills him.
 - Andrew attacks Liam, but they both defend and survive.
 
+### DAY 1:
+- Ben Jelavic: 6 (Lauren Heading, Liam Cahill, Lauren McNamara, Alex Rowell, Rachel Alger, Michael Cui)
+- Rachel Alger: 2 (Robbie Collins, Bryan Mitchell)
+- Michael Cui: 1 (Joel Aquilina)
+- Joel Aquilina: 1 (David Vo)
+
+
 ### NIGHT 1:
 - Joel investigates Deanna and learns she is a Tribute.
 - Evan performs the Tribute kill on Liam Cahill.
@@ -115,7 +122,13 @@ I'm going to give a quick overview of the actual actions and then make some brie
   - Robbie: Medicine
 
 Night 1 was fairly uneventful. Nearly everyone either hid or guarded, playing it safe to begin with.
-As previously mentioned, logs aren't available from that N1 unfortunately.
+As previously mentioned, unfortunately logs aren't available from N1.
+
+### Day 2:
+- Jacob Frilay: 8 (David Vo, Rachel Alger, Lauren McNamara, Lauren Heading, Andrew Titmuss, Robbie Collins, Maddie Wagner, Alex Rowell)
+- Shane Arora: 2 (Mitchell Busby, Jacob Frilay)
+- Lauren Heading: 1 (Deanna Arora)
+
 
 ### NIGHT 2
 - Joel investigates Rachel and learns she is a Career.
@@ -128,6 +141,12 @@ As previously mentioned, logs aren't available from that N1 unfortunately.
 	- Lauren H: Trap
 
 Another fairly straightforward night considering the number of players alive. Many players once again either hid or guarded. Joel got lucky and found a Career. Evan wasn't far off finding Mitchell, but Mitchell had guarded so it was unlikely he would have died. Terry had an extremely low chance of finding Aretha, as she had hidden and had an Agility boosting item, so the Mafia had their first night (of many) without kills. Joel received a third item, which meant even considering his high luck, RNGeezus was favouring him...
+
+### DAY 3
+- Rachel Alger: 8 (Lauren Heading, Bryan Mitchell, Alex Rowell, Ben Myers, Aretha Peethamparam, Evan Kohilas, Shea Bunge, Hayley van Waas)
+- Aretha Peethamparam: 4 (Rachel Alger, Michael Cui, Riley Hoolahan, Maddie Wagner)
+- Joel Aquilina: 1 (Lauren McNamara)
+
 
 ### NIGHT 3
 - Shane uses a trap on Joel.
@@ -148,6 +167,11 @@ This was quite the blow to the Mafia, after losing Rachel earlier that day. Now 
 
 Hayley couldn't locate Lauren, partly due to her naturally high Agility. Robbie had a fair chance at finding Terry, but luckily Terry had hidden that night, and so couldn't be found.
 
+### DAY 4
+- Robbie Collins: 7 (Lauren Heading, Ben Myers, Lauren McNamara, Joel Aquilina, Riley Hoolahan, Evan Kohilas, Mitchell Busby)
+- Riley Hoolahan: 2 (Robbie Collins, Alex Rowell)
+- Ben Myers: 1 (Michael Cui)
+- Lauren Heading: 1 (Hayley van Waas)
 
 ### NIGHT 4
 - Lauren protects Joel
@@ -171,6 +195,10 @@ Asides from the careers, there was many town instigated kills tonight. Lauren wa
 
 Also it's interesting to note that Shea had quite high Agility bit abysmal Luck. So he was successful in receiving his Poison from the Cornucopia, but it was very very unlikely he would receive any sponsor items. Yet, somehow he did, which goes to show that random truly is (pseudo) random xD
 
+### DAY 5
+- Ben Myers: 10 (Alex Rowell, Evan Kohilas, Maxwell Hajncl, Michael Cui, Lauren Heading, David Vo, Maddie Wagner, Hayley van Waas, Riley Hoolahan, Bryan Mitchell)
+- Hayley van Waas: 1 (Ben Myers)
+
 ### NIGHT 5
 - Alex traps Caitlin.
 - Lauren H protects Evan, and heals him of poison.
@@ -186,6 +214,15 @@ While there were less total actions than the previous night, a lot of important 
 
 Additionally, Lauren healed Evan of his poison, saving him from his impending doom. Of course, she didn't know that he was Mafia, but it's always worth considering if it's worth healing someone who is poisoned. Often even if there's a fair chance that their innocent, perhaps their death could shed some light on things, or else perhaps the protection would be better used on someone else.
 
+### DAY 6
+- Shea Bunge: 2 (Andrew Titmuss, Evan Kohilas)
+- Maddie Wagner: 2 (Michael Cui, Alex Rowell)
+- Evan Kohilas: 1 (Shea Bunge)
+
+__Revote__
+- Shea Bunge​: 6 (Andrew Titmuss, Caitlin Bell, Evan Kohilas, Lauren Heading, Maddie Wagner, Maxwell Hajncl)
+- Maddie Wagner​: 5 (Alex Rowell, Michael Cui, Mitchell Busby, Riley Hoolahan, Shea Bunge)
+
 ### NIGHT 6
 - Alex uses medicine to protect Lauren H.
 - Maddie poisons Alex.
@@ -197,6 +234,10 @@ Additionally, Lauren healed Evan of his poison, saving him from his impending do
 	- Riley: Broad Sword
 
 A quiet night indeed, there were only two kill attempts (both from the Mafia), both of which failed. Riley was a good target for the career kill, as she had low base agility, but a combination of her previously raided Running Shoes and a Luck boost meant she was able to stay hidden. Caitlin's bomb attack had a fairly low threshold, but unfortunately for her, she rolled extremely low.
+
+### DAY 7
+- Maddie Wagner: 6 (Lauren Heading, Bryan Mitchell, Alex Rowell, Caitlin Bell, Evan Kohilas, Michael Cui)
+- Caitlin Bell: 4 (David Vo, Maddie Mackey, Hayley van Waas, Maddie Wagner)
 
 ### NIGHT 7
 - Alex traps Michael.
@@ -215,6 +256,10 @@ There were a few more attack actions attempted tonight. Bryan had very low Stren
 
 For the first time in the game, a grenade detonated successfully, killing Riley without revealing her identity. It also destroyed any items she had been holding without giving Caitlin a chance to raid.
 
+### DAY 8
+- Maxwell Hajncl: 4 (Bryan Mitchell, Mitchell Busby, Michael Cui, Evan Kohilas)
+- Michael Cui: 1 (Alex Rowell)
+
 ### NIGHT 8
 - Alex bombs Bryan, killing him in the explosion and destroying his items.
 - Evan attempts the career kill on Lauren H, but cannot find her.
@@ -225,6 +270,15 @@ For the first time in the game, a grenade detonated successfully, killing Riley 
 	- Caitlin: Trap
 
 Another grenade explosion left Bryan dead without his identity revealed. Otherwise, this night really highlighted a struggle the Mafia were having this game. While the career kill granted a significant strength bonus, there was no modifier applied to their agility. Even though the agility roll was already biased towards the searcher, the Mafia would have a tough time performing any kills if they couldn't locate their targets. The idea isn't for the career kill to be foolproof, the game was designed for it to occasionally fail. But given the amount of failed mafia kills in this game, perhaps I should have applied a minor agility boost to is as well.
+
+### DAY 9
+- Evan Kohilas: 3 (Hayley van Waas, David Vo, Michael Cui)
+- Michael Cui: 3 (Evan Kohilas, Maddie Mackey, Mitchell Busby)
+- Caitlin Bell: 1 (Lauren Heading)
+
+__Revote__
+- Michael Cui: 7 (Alex Rowell, Andrew Titmuss, Caitlin Bell, Evan Kohilas, Maddie Mackey, Mitchell Busby)
+- Evan Kohilas: 2 (Michael Cui, David Vo)
 
 ### FEAST
 - The following players receive items:
@@ -260,7 +314,14 @@ Similarly, to Andrew, Lauren H also lost the Lucky Armour later that night. Her 
 It's worth noting that because a lot of the attacks tonight were focused on Evan, it also meant that individually he started to snowball somewhat in Strength. Each win resulted in a raid, and these often left him better prepared for the next fight. Similar things can happen like this in even normal Mafia games, when a particular player has been drawing a lot of attention to themselves. Often in these situations, that player will draw a large number of roll actions, which can often cause unexpected or undesired results in the aggregate. Whenever you target somebody with a role, it's always worth considering how likely they are to be targeted by other roles, and if that will affect you. Sometimes having your role work successfully is more important than having it work on a particular person.
 
 ### DAY 10
-_(Going to start giving some comments on the days outcomes now as well)_
+- Evan Kohilas: 3 (Maddie Mackey, Alex Rowell, David Vo)
+- Maddie Mackey: 3 (Evan Kohilas, Terry Watson, Caitlin Bell)
+
+__Revote__
+- Evan Kohilas: 3 (Maddie Mackey, Alex Rowell, David Vo)
+- Maddie Mackey: 3 (Evan Kohilas, Terry Watson, Caitlin Bell)
+
+_(Going to start giving some comments on the days outcomes now as well as vote tallies)_
 
 By now we were tied 3-3 mafia to town. Usually at this point the game would be over and the Mafia win, but that's not how the Hunger Games works. I never explicitly told either side, but my final twist was that this game was going to be more or less a last-man standing. Hopefully this would become apparent to everyone as the game approached it's end. So, play had to continue. Also, owing to the Grenade related deaths, the exact number wasn't known to the town, so it was important to maintain the possibility of their being a different ratio living players.
 
@@ -278,6 +339,8 @@ Predictably, the vote for Day 10 ended in a 3-3 tie between Evan and Maddie. Obv
 This was the last night that the Mafia needed to establish a proper majority in their numbers. There were a lot of last ditch attempts by the town to take out a mafia member. Alex was pretty unlucky with his Grenade, his luck stat meant it was pretty likely to be successful, but the roll worked against him. Maddie might have stood a chance in a fight with Evan, but Agility was not quite in her favour, and Evan couldn't be found. On the other hand, I was not expecting Terry to be able to locate Alex, as Alex's Agility was much higher. It seemed that Agility was finally working in the Mafia's favour tonight, as Terry managed to get a very high role and successfully perform the career kill.
 
 ### DAY 11
+- David Vo: 3 (Evan Kohilas, Terry Watson, Caitlin Bell
+
 So by now the mafia had the 3-2 advantage and they knew it. Of course, there's a reason why games usually end when there's a mafia majority, because they can just take control of the lynch like they did here. In an earlier draft of my game plan, I had that if the mafia achieved a majority, all non-mafia players would be eliminated instantly and the remaining mafia would have to battle it out til the end.
 However I thought it would be best to let the game continue for two reasons, the first being that the nightly mafia kill was not guaranteed, and it could be possible (though difficult and unlikely) for the town to win back the balance of power. Secondly, I kind of hoped we might get some cross factional alliances forming during the day phase. If enough players came to the conclusion that the game was last-man-standing, it would also be reasonable to assume that going up against players stronger than you might be a bad idea.
 Regardless, the mafia instantly piled their votes onto David, who didn't even put up a struggle. Nothing unexpected happened and the mafia went into the night phase up 3-1.
@@ -293,6 +356,8 @@ _(Also, somehow the full logs are missing from tonight as well, not sure how tha
 While Caitlin and Terry did what they could to incapacitate Maddie, the career's decided that they would not kill her tonight (and risk a counterattack), but instead leave her alive to be lynched tomorrow. However, surprising his teammates, Evan decided to perform the Career kill on Terry instead. I assume by now he had realised that something was afoot, and that Terry was risky to keep around. The kill was successful, and by the last day we were down to just Evan, Caitlin and Maddie.
 
 ### DAY 12
+- Maddie Mackey: 2 (Caitlin Bell, Evan Kohilas)
+
 Once again, I really hoped someone would try and make an alliance. For example, it would have been a great play for Caitlin and Maddie to vote out Evan, particularly if she had known that Evan was the one that killed Terry (and not Maddie). With the amount of items Evan was holding by now, he would be tough to beat. But the Mafia stuck together until the end and Maddie was lynched, bringing us into the final night.
 
 ### NIGHT 12 - The Final Showdown
