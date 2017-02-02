@@ -932,33 +932,45 @@ class Game:
 
 
     def final_battle(self, player1, player2, lives = 3):
+        """
+        Simulate the final confrontation between the last two players
+        Players take turns in combat with a certain amount of lives
+        Last player standing wins the game
+        """
+
         player1.battle_lives = player2.battle_lives = lives
+
+        #Determine who attacks first
         p1a = player1.get_stat("Agility")
         p2a = player2.get_stat("Agility")
         if p1a > p2a:
             first, second = player1, player2
         elif p2a > p1a:
             first, second = player2, player1
-        elif p1a == p2a:
+        elif p1a == p2a: #Randomly assign if Agility is equal
             players = [player1, player2]
             random.shuffle(players)
             first, second = players
-        round = 1
+
+        #Perform the combat rounds
+        cur_round = 1
         while player1.battle_lives > 0 and player2.battle_lives > 0:
-            if round % 2 == 1:
+            if cur_round % 2 == 1: #"first" attacks "second"
                 attack_result = first.attack_check(second)
                 if attack_result == CombatOutcome.success:
                     second.battle_lives -= 1
                 elif attack_result == CombatOutcome.countered:
                     first.battle_lives -= 1
-            else:
+            else: #"second" attacks "first"
                 attack_result = second.attack_check(first)
                 if attack_result == CombatOutcome.success:
                     first.battle_lives -= 1
                 elif attack_result == CombatOutcome.countered:
                     second.battle_lives -= 1
-            print("Round {}, {} lives: {}, {} lives: {}".format(round, player1.name, player1.battle_lives, player2.name, player2.battle_lives))
-            round += 1
+            print("Round {}, {} lives: {}, {} lives: {}".format(cur_round, player1.name, player1.battle_lives, player2.name, player2.battle_lives))
+            cur_round += 1
+
+        #Check if someone has won yet
         if player1.battle_lives > 0:
             print("{} Wins the Hunger Games!!!".format(player1.name))
             player2.set_dead();
@@ -966,25 +978,36 @@ class Game:
             print("{} Wins the Hunger Games!!!".format(player2.name))
             player1.set_dead();
 
+
     def stat_based_selection(self, selection_players, selection_stats, positive = True, n = 1, unique = True):
+        """
+        Randomly select a player from a group, with odds proportional to stat(s)
+        Creates a pool of names, similar to a raffle, with multiple entries per player
+        Higher stats means more entries into the pool
+        Then a name is randomly chosen from the pool
+        Setting positive = False will invert stats (low stats more likely chosen)
+        """
+
         if n > len(selection_players) and unique:
             raise ValueError("Unable to select {} unique players from {}".format(n, len(selection_players)))
+
         distribution = []
-        living_selected = [p for p in selection_players if p.is_alive]
-        #This is the easiest but memory inefficient way of doing a weighted distribution
-        #But the numbers will be small enough that it won't be a problem
-        player_scores = {player:0 for player in living_selected}
+        living_selected = [p for p in selection_players if p.is_alive] #Only want to choose living players
+        #This is an easy but memory inefficient way of doing a weighted distribution
+        #The numbers will be small enough that it won't be a problem
+        player_scores = {player : 0 for player in living_selected}
         for player in player_scores:
             for stat in selection_stats:
                 player_scores[player] += player.get_stat(stat)
 
+        #Create the distribution pool
         if positive:
             distribution = [player for player in living_selected for i in range(player_scores[player])]
         else:
             invert = max(player_scores[i] for i in player_scores) + min(player_scores[i] for i in player_scores)
             distribution = [player for player in living_selected for i in range(invert - player_scores[player])]
 
-        # print(distribution)
+        #Select n players from the pool
         selected = set()
         ranked_players = []
         if unique:
@@ -999,16 +1022,11 @@ class Game:
 
         return ranked_players
 
-    def save_players(self):
-        self.print_players()
-        write_player_file("Players.csv", [p.get_dict() for p in self.get_players()])
-        pickle_obj('pik.dat', self.players)
-
-
-    def load_players(self):
-        self.players = unpickle_obj('pik.dat')
 
     def save_game(self):
+        """
+        Save game object to pickle file and create a timestamped backup
+        """
         self.print_players()
         t = datetime.now()
         cwd = os.path.dirname(os.path.realpath(__file__))
@@ -1019,93 +1037,120 @@ class Game:
         pickle_obj(os.path.join(cwd,sdir,'{}.dat'.format(self.game_name)), self)
         pickle_obj(os.path.join(cwd,sdir,'{}_{}-{}-{}-{}.dat'.format(self.game_name, t.month, t.day, t.hour, t.minute)), self)
 
-def write_player_file(path, player_dicts):
-    """
-    Write player data to a CSV file
-    """
-    with open(path, 'w', newline='') as f:
-        wrt = csv.DictWriter(f, ["Name"] + ATTRIBUTES)
-        wrt.writeheader()
-        wrt.writerows(player_dicts)
+    def write_player_file(path, player_dicts):
+        """
+        Write player data to a CSV file
+        """
+        with open(path, 'w', newline='') as f:
+            wrt = csv.DictWriter(f, ["Name"] + ATTRIBUTES)
+            wrt.writeheader()
+            wrt.writerows(player_dicts)
 
     def print_players(self):
+        """
+        Print each player and relevant info on a new line
+        """
         for p in self.get_players():
             print(p)
 
-    def set_ids_and_districts(self, path):
-        with open(path) as f:
-            rdr = csv.DictReader(f)
-            for i, line in enumerate(rdr):
-                cur_player = self.get_player_by_name(line["Name"])
-                cur_player.id = i
-                cur_player.district = (i // 2) + 1
+
 
 
 
     def initial_setup(self):
+        """
+        Perform initial game Setup
+        Creates players from response CSV, and sets the kingpin
+        """
         print("~~~Initial Setup~~~")
         self.create_players_from_responses("Responses.csv")
-        self.set_ids_and_districts("saved_players.csv")
+        #self.set_ids_and_districts("saved_players.csv") #Shouldn't need this anymore
         self.kingpin = random.choice(self.get_players())
-        # print(kingpin)
         self.kingpin.is_kingpin = True
         self.kingpin.is_career = True
         print("Kingpin is:", self.kingpin.name)
-
         self.save_game()
 
+    #This is done in create_players_from_responses now
+    # def set_ids_and_districts(self, path):
+    #     with open(path) as f:
+    #         rdr = csv.DictReader(f)
+    #         for i, line in enumerate(rdr):
+    #             cur_player = self.get_player_by_name(line["Name"])
+    #             cur_player.id = i
+    #             cur_player.district = (i // 2) + 1
 
     def run_pregame(self):
+        """
+        Run the pregame
+        (In this case, just cornucopia, but other things may be needed)
+        """
         print("~~~Pregame~~~")
-        # self.load_players()
         self.run_cornucopia(self.get_players_from_csv("Cornucopia.csv"))
-        # self.save_players()
 
-    def refresh_players(self):
-        self.load_players()
-        self.save_players()
+
 
     def run_game_phase(self, phase = None):
+        """
+        Run a game phase (both night and day)
+        Lynches a player from lynch file
+        Reads and runs night actions, saving results
+        Distributes sponsors
+        """
         if phase is None:
             phase = self.current_phase
+
+        #Day Phase
         print("~~~Day {}~~~".format(phase))
         self.lynch_player_from_file()
-        if phase == 9:
+
+        if phase == 9: #Feast occurs here
             print("~~~Feast ~~~")
             self.run_feast(self.get_players_from_csv("Feast.csv"))
+
+        #Night Phase
         print("~~~Night {}~~~".format(phase))
         cur_living = self.get_living_players()
-        if len(cur_living) == 2:
+
+        if len(cur_living) == 2: #Final two
             print("THE FINAL SHOWDOWN!")
             self.final_battle(*cur_living)
-        elif len(cur_living) == 1:
+        elif len(cur_living) == 1: #Game Over
             print("{} Wins the Hunger Games!".format(cur_living[0].name))
-        else:
-            # self.load_players()
+        else: #Normal night
             self.current_phase = phase
             self.night_actions[self.current_phase] = []
+
+            #Read all submitted night actions from CSV
             current_actions = self.night_actions[self.current_phase]
             with open("night{}.csv".format(self.current_phase)) as f:
                     rdr = csv.DictReader(f)
                     for i, line in enumerate(rdr):
                             current_actions.append(dict({"Line" : i}, **line))
+
+            #Sort actions by priority, then agility, then submission time
             current_actions.sort(key = lambda x: x["Line"])
             current_actions.sort(key = lambda x: self.get_player_by_name(x["Player"]).get_stat("Agility"), reverse = True)
             current_actions.sort(key = lambda x: self.get_action_priority(x["Action"]))
+
+            #Perform each action
             for a in current_actions:
                     a['Result'] = self.perform_action(a)
 
+            #Check if anyone dies from poison
             for player in [p for p in self.get_players() if p.is_alive]:
                     if player.poison_death_check():
                             player.set_dead()
                             player.death_text = "Killed by poison on Night {}".format(CURRENT_PHASE)
                             print("{} has died of Posioning!".format(player.name))
 
+            #Write out night results
             with open("night{}_results.csv".format(self.current_phase), 'w', newline='') as f:
                     wrt = csv.DictWriter(f, ["Line", "Player", "Action", "Target", "Result"])
                     wrt.writeheader()
                     wrt.writerows(current_actions)
 
+            #Perform sponsor giveaways
             self.distribute_sponsor_items(self.current_phase)
 
     def lynch_player_from_file(self, day = None):
