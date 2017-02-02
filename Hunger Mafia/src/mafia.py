@@ -1,3 +1,9 @@
+### Mafia.py
+### Author: Liam Callaway
+### Used for running and managing player data for NCSS Hunger Mafia Game
+
+
+
 import random
 import math
 import csv
@@ -56,32 +62,54 @@ ATTRIBUTES = ["Strength", "Defence", "Agility", "Luck"]
 TRACE = True
 
 def invnormalcdf(x, mu = 0, sigma = 1):
+    """
+    Calculate an inverse normal cumilitative distribution function
+    """
     z = (x - mu) / sigma
     return 1 - ((1.0 + math.erf(z / math.sqrt(2.0)))/2)
 
+
 def pickle_obj(path, obj):
+    """
+    Pickle an object to a filepath
+    """
     with open(path, "wb") as f:
         pickle.dump(obj,f)
+
+
 def unpickle_obj(path):
+    """
+    Unpickle an object from a filepath
+    """
     with open(path, 'rb') as f:
         return pickle.load(f)
 
-def write_player_file(path, player_dicts):
-    with open(path, 'w', newline='') as f:
-        wrt = csv.DictWriter(f, ["Name"] + ATTRIBUTES + ["Holding"])
-        wrt.writeheader()
-        wrt.writerows(player_dicts)
 
-
-def print_results(name, target, roll):
+def print_roll_results(name, target, roll):
+    """
+    Print a readable summary of a roll outcome
+    """
     result = "Pass" if roll >= target else "Fail"
     print("{} Check. Target: {}, Roll: {}, Result: {}".format(name, target, roll, result))
 
+
 def getBlankDD():
+    """
+    Helper method for creating mutable defaultdict
+    """
     return defaultdict(int)
 
+
 class Player:
+    """
+    Manage information and actions related to a single players
+    """
+
+
     def __init__(self, name, preferences, advantage):
+        """
+        Create a player based on their stat preferences
+        """
         self.name = name
         self.preferences = preferences
         self.inventory = []
@@ -98,56 +126,94 @@ class Player:
         self.death_text = None
 
 
-
     def __repr__(self):
         return self.name
+
+
     def __str__(self):
         return "{}: {}, District: {}{}.\n\tStrength: {Strength}, Defence: {Defence}, Agility: {Agility}, Luck: {Luck}".format(self.name, ("Living" if self.is_alive else "Dead"), self.district, (", Career" if self.is_career else ""), **self.stats) + ("\n\tHolding: {}".format(self.inventory) if self.inventory else "")
 
+
     def get_dict(self):
+        """
+        Return a dictionary representation of the player
+        """
         return dict({"Name": self.name, "Holding":", ".join(i.name for i in self.inventory)}, **self.stats)
 
+
     def _initialise_stats(self):
+        """
+        Perform the initial stat allocation
+        """
         calculated_stats = {a:0 for a in ATTRIBUTES}
-        for _ in range(20):
+        for _ in range(20):  #Randomly allocate 20 stat points
             calculated_stats[random.choice(ATTRIBUTES)] += 1
         bonuses = self._calculate_response_bonuses()
-        for b in bonuses:
+        for b in bonuses: #Apply the remaining 8-10 response points
             calculated_stats[b] += bonuses[b]
         return calculated_stats
 
+
     def _calculate_response_bonuses(self):
+        """
+        Calculate the additional stat bonuses
+        """
         bonuses = [0,0,0]
         for _ in range(7):
             bonuses[random.choice(range(3))] += 1
+        #Combine randomised bonuses with response bonus
         bonuses = [sum(x) for x in zip(sorted(bonuses, reverse=True), self.response_bonus)]
-        b = {self.preferences[i]:bonuses[i] for i in range(3)}
-        return b
+        #Assign bonuses in order of preference
+        return {self.preferences[i]:bonuses[i] for i in range(3)}
+
 
     def _apply_luck(self):
+        """
+        Perform a "luck roll" to see if Luck bonus is awarded
+        """
         return 1 if random.random() >= invnormalcdf(self.stats['Luck'],7,3) else 0
 
+
     def _get_item_bonus(self,stat):
+        """
+        Sum all passive item boosts to a particular stat
+        """
         result = sum(x.bonuses[stat] for x in self.inventory if x.usage == "Passive")
         return result if result is not None else 0
 
+
     def get_stat(self,stat, debug = False):
-        a,b,c,d = self.stats[stat], self._apply_luck(), self.action_bonus[CURRENT_PHASE][stat], self._get_item_bonus(stat)
-        x = a + b + c + d
+        """
+        Retrieve value for a player's stat based on various factors
+        """
+        factors = self.stats[stat], self._apply_luck(), self.action_bonus[CURRENT_PHASE][stat], self._get_item_bonus(stat)
+        calculated_stat = sum(factors)
         if debug:
-            print("{} has a {} stat of {}, ({})".format(self.name, stat, x, [a,b,c,d]))
-        return x
+            print("{} has a {} stat of {}, ({})".format(self.name, stat, calculated_stat, factors))
+        return calculated_stat
+
 
     def record_action(self, action, target = None):
+        """
+        Save a record of a player's night action choice
+        """
         if target is None:
             target = self
         self.actions[CURRENT_PHASE].append((action, target))
         print("Recording action {} {} {}".format(self.name, action, target.name))
 
+
     def held_bombs(self):
-        return self.get_usable_items("Bomb")
+        """
+        Check if player is holding a grenade or not
+        """
+        return self.get_usable_items("Bomb") #Grenade's action is "Bomb"
+
 
     def set_dead(self, killer = None):
+        """
+        Set a player as dead and use a held grenade
+        """
         self.is_alive = False
         print("{} is now dead".format(self.name))
         if killer is not None:
@@ -157,32 +223,24 @@ class Player:
                 self.bomb(killer, threshold = 0.25)
 
 
-    def hide(self):
-        self.record_action('Hide')
-        self.action_bonus[CURRENT_PHASE]['Agility'] += 4
-        print("{} successfully hides".format(self.name))
-
-    def guard(self):
-        self.record_action('Guard')
-        self.action_bonus[CURRENT_PHASE]['Defence'] += 2
-        print("{} successfully guards".format(self.name))
-
-
     def get_usable_items(self, ability_name):
+        """
+        Retrieve held items capable of performing an action
+        """
         return [i for i in self.inventory if i.ability == ability_name and i.uses]
-
-    def drink_serum(self, serum):
-        self.record_action('Drink ' + serum.name)
-        for stat in serum.bonuses:
-            self.action_bonus[CURRENT_PHASE][stat] += serum.bonuses[stat]
-        self.use_item(serum)
-        print("{} successfully drinks {}".format(self.name, serum.name))
 
 
     def add_item(self, item):
+        """
+        Add an item to player's inventory
+        """
         self.inventory.append(item)
 
+
     def use_item(self, item):
+        """
+        Use a held item if possible, destroy it afterwards
+        """
         if not item.uses:
             print("{} tried to use {}, but failed as it has no more uses: {}".format(player.name, item.name, item.uses))
         else:
@@ -192,22 +250,37 @@ class Player:
                 print("{} is destroyed".format(item.name))
                 self.inventory.remove(item)
 
+
     def apply_status(self, status):
+        """
+        Apply a status affect to player
+        """
         self.status[CURRENT_PHASE].append(status)
 
     def poison_death_check(self):
+        """
+        Check if was poisoned more than 3 nights ago (inclusive)
+        """
         if CURRENT_PHASE < 3:
             return False
         return any("Poisoned" in self.status[i] for i in range(1, CURRENT_PHASE - 2))
 
     def heal_poison(self):
+        """
+        Completely remove poison status from player
+        """
         for i in range(1, CURRENT_PHASE):
             if "Poisoned" in self.status[i]:
                 print("{} was poisoned on Night {}".format(self.name, CURRENT_PHASE))
                 self.status[i] = [x for x in self.status[i] if x != "Poisoned"]
                 print("{} has been healed of Poisoning.".format(self.name))
 
+
     def action_on_cooldown(self, action):
+        """
+        Check if an action is on cooldown and canot be performed
+        Based on if it has been performed within the last 4 nights
+        """
         for i in range(CURRENT_PHASE - 3, CURRENT_PHASE + 1):
             if i > 0:
                 if self.actions[i]:
@@ -215,16 +288,27 @@ class Player:
                         print("{} has used {} on Night {}".format(self.name, action, i))
                         return True
         return False
-        # return any(action in self.actions[CURRENT_PHASE - i] for i in range(4) if CURRENT_PHASE - i > 0)
 
 
     def can_perform_any_action(self):
+        """
+        Check if able to use an action
+        Trapped or dead players cannot do anything
+        """
         return "Trapped" not in self.status[CURRENT_PHASE] and self.is_alive
 
+
     def is_protected(self):
+        """
+        Check if player has been protected tonight
+        """
         return "Protected" in self.status[CURRENT_PHASE]
 
+
     def perform_item_action(self, target, action):
+        """
+        Perform an action via the use of an item
+        """
         available_items = self.get_usable_items(action)
         if available_items:
             selected_item = available_items[0]
@@ -250,20 +334,27 @@ class Player:
                 return "Failed - Target Dead"
 
 
-
     def investigate(self, target):
+        """
+        Investigate a target player to learn their alignment and stats (Telescope)
+        """
         if target.is_alive:
             if target != self:
                 print("{} successfully investigates {} and learns they are {}, and their stats are {}".format(self.name, target.name, "Career" if target.is_career else "Tribute" , target.stats))
+                #Stats are sent to player in PM, do not actually need to be recorded in game
                 return "Success: {}".format("Career" if target.is_career else "Tribute")
-            else:
+            else: #Can't investigate self
                 print("{} tried to investigate {} but failed as they cannot protect themself".format(self.name, target.name))
                 return "Failed: Self Target"
-        else:
+        else: #Can't investigate dead player
             print("{} tried to investigates {} but failed as the target is already dead".format(self.name, target.name))
             return "Failed: Target already dead"
 
     def follow(self, target):
+        """
+        Follow a target player to observe their night actions (Scout Drone)
+        """
+        #As follow can still happen on a player that died this night, need to check when they died
         if target.is_alive or "Night {}".format(CURRENT_PHASE) in target.death_text:
             print("{} successfully follows {} and learns they performed {}".format(self.name, target.name, target.actions[CURRENT_PHASE]))
             return "Success: {}".format(target.actions[CURRENT_PHASE])
@@ -273,30 +364,42 @@ class Player:
 
 
     def protect(self, target):
+        """
+        Protect a player from being killed and heal them of poison (MedPack)
+        """
         if target.is_alive:
             if target != self:
                 target.apply_status("Protected")
                 target.heal_poison()
                 print("{} successfully protected {}".format(self.name, target.name))
                 return "Success"
-            else:
+            else: #Can't protect self
                 print("{} tried to protect {} but failed as they cannot protect themself".format(self.name, target.name))
                 return "Failed: Self Target"
-        else:
+        else: #Can't revive the dead
             print("{} tried to protect {} but failed as the target is already dead".format(self.name, target.name))
             return "Failed: Target already dead"
 
+
     def heal(self, target):
+        """
+        Protect a player from being killed and heal them of poison (Medicine)
+        Medicine is single use but allows self targeting
+        """
         if target.is_alive:
             target.apply_status("Protected")
             target.heal_poison()
             print("{} successfully healed {}".format(self.name, target.name))
             return "Success"
-        else:
+        else: #Can't revive the dead
             print("{} tried to protect {} but failed as the target is already dead".format(self.name, target.name))
             return "Failed: Target already dead"
 
+
     def trap(self, target):
+        """
+        Trap a player to prevent them from performing any actions (Trap & Trap Kit)
+        """
         if target.is_alive:
             if target != self:
                 target.apply_status("Trapped")
@@ -309,26 +412,35 @@ class Player:
             print("{} tried to trap {} but failed as the target is already dead".format(self.name, target.name))
             return "Failed: Target already dead"
 
+
     def poison(self, target):
+        """
+        Infect a player with poison so they will die in 3 nights (Poison Dart)
+        """
         if target.is_alive:
             if target != self:
                 target.apply_status("Poisoned")
                 print("{} successfully poisoned {}".format(self.name, target.name))
                 return "Success"
             else:
-                print("{} tried to poison {} but failed as they cannot protect themself".format(self.name, target.name))
+                print("{} tried to poison {} but failed as they cannot poison themself".format(self.name, target.name))
                 return "Failed: Self Target"
         else:
             print("{} tried to poison {} but failed as the target is already dead".format(self.name, target.name))
             return "Failed: Target already dead"
 
+
     def bomb(self, target, threshold = 0.5):
-        if self._apply_luck():
+        """
+        Throw a grenade at a target, potentially killing them (Grenades)
+        Does not reveal Identitiy
+        """
+        if self._apply_luck(): #Luck can lower the threshold
             threshold -= 0.2
         roll = random.random()
         result = roll >= threshold
         print("{} tries to bomb {}. Threshold: {}, roll: {}".format(self.name, target.name, threshold, roll))
-        if result:
+        if result: #Target was exploded
             target.set_dead(killer = self)
             print("{} has been killed in an explosion".format(target.name))
             target.death_text = "Killed by a bomb from {} on Night {}".format(self.name, CURRENT_PHASE)
@@ -336,27 +448,45 @@ class Player:
                 print("The following items were destroyed {}".format(target.inventory))
                 target.inventory = []
             return "Success"
-        else:
+        else: #Target dodged
             print("{} has dodged an explosion".format(target.name))
             return "Failed: Dodged"
 
 
-        # if target.is_alive:
-        #     if target != self:
-        #         target.apply_status("Bombed")
-        #         print("{} successfully attached a bomb to {}".format(self.name, target.name))
-        #         return "Success"
-        #     else:
-        #         print("{} tried to attach a bomb to {} but failed as they cannot protect themself".format(self.name, target.name))
-        #         return "Failed: Self Target"
-        # else:
-        #     print("{} tried to attach a bomb to {} but failed as the target is already dead".format(self.name, target.name))
-        #     return "Failed: Target already dead"
+    def drink_serum(self, serum):
+        """
+        Drink a serum to gain a temporary stat boost
+        """
+        self.record_action('Drink ' + serum.name)
+        for stat in serum.bonuses:
+            self.action_bonus[CURRENT_PHASE][stat] += serum.bonuses[stat]
+        self.use_item(serum)
+        print("{} successfully drinks {}".format(self.name, serum.name))
 
+
+    def hide(self):
+        """
+        Hide from attacks to gain a large boost to Agility
+        """
+        self.record_action('Hide')
+        self.action_bonus[CURRENT_PHASE]['Agility'] += 4
+        print("{} successfully hides".format(self.name))
+
+
+    def guard(self):
+        """
+        Brace for attacks to gain a boost to Degence
+        """
+        self.record_action('Guard')
+        self.action_bonus[CURRENT_PHASE]['Defence'] += 2
+        print("{} successfully guards".format(self.name))
 
 
     def attack(self, other, career_kill = False):
-        if career_kill:
+        """
+        Perform an attack to try and kill another players
+        """
+        if career_kill: #Career kill has a significant strength boost
             self.record_action("Kill", other)
             self.action_bonus[CURRENT_PHASE]['Strength'] += 4
             print("{} attempts a Career kill on {}".format(self.name, other.name))
@@ -364,93 +494,117 @@ class Player:
             self.record_action("Attack", other)
             print("{} attempts an attack on {}".format(self.name, other.name))
 
+        #Perform the search roll
         search_result = self.search_check(other)
-        if not search_result:
+        if not search_result: #Can't be found
             print( "Attack Failed, {} could not locate {}".format(self.name, other.name))
             if career_kill:
                 self.action_bonus[CURRENT_PHASE]['Strength'] -= 4 #remove the bonus
             return CombatOutcome.hidden
         else:
+            #Engage in combat
             combat_result = self.combat(other)
             if career_kill:
                 self.action_bonus[CURRENT_PHASE]['Strength'] -= 4 #remove the bonus
             return combat_result
 
 
+    def search_check(self, other):
+        """
+        Roll to determine if the opponent can be located
+        Based on difference between Agility stats
+        Biased towards searcher
+        """
+        a1 = self.get_stat('Agility', TRACE)
+        a2 = other.get_stat('Agility', TRACE)
+        agility_delta = a1 - a2
+
+        if CURRENT_PHASE > 7: #Fatigue Mode
+            target = invnormalcdf(agility_delta,-4,4) #Strongly biased
+        else:
+            target = invnormalcdf(agility_delta,-1,4)
+
+        roll = random.random()
+        print_roll_results("Search", target, roll)
+        return roll >= target
+
+
     def combat(self, other):
+        """
+        Engage in combat with opponent to determine attack outcome
+        """
+        #Perform the attack roll
         attack_result = self.attack_check(other)
         if attack_result == CombatOutcome.success:
-            if other.is_protected():
+            if other.is_protected(): #Opponent saved by protection
                 print( "Attack Prevented, {} tried to kill {}, but failed as target is protected".format(self.name, other.name))
                 return CombatOutcome.success_protected
-            else:
+            else: #Successfully killed
                 other.set_dead(killer = self)
-                # other.is_alive = False
                 other.death_text = "Killed by {} on Night {}".format(self.name, CURRENT_PHASE)
                 print( "Attack Succeeded, {} killed {}".format(self.name, other.name))
-        elif attack_result == CombatOutcome.failed:
+        elif attack_result == CombatOutcome.failed: #Opponent blocked but no counter
             print( "Attack Failed, {} defended against {}".format(other.name, self.name))
         elif attack_result == CombatOutcome.countered:
-            if self.is_protected():
+            if self.is_protected(): #Counterattack prevented by protection
                 print( "Counter Prevented, {} was countered by {}, but survived as they are protected".format(self.name, other.name))
                 return CombatOutcome.countered_protected
-            else:
+            else: #Killed in a counter attack :(
                 self.set_dead(killer = other)
-                # self.is_alive = False
                 other.death_text = "Counter killed by {} on Night {}".format(other.name, CURRENT_PHASE)
                 print( "Attack Failed, {} was counter killed by {}".format(self.name, other.name))
         return attack_result
 
 
-    def search_check(self, other):
-        a1 = self.get_stat('Agility', TRACE)
-        a2 = other.get_stat('Agility', TRACE)
-        # a1 = self.stats['Agility'] + self.apply_luck()
-        # a2 = other.stats['Agility']+ other.apply_luck() + (5 if other.agility_bonus else 0)
-        agility_delta = a1 - a2
-        if CURRENT_PHASE > 7:
-            ###Fatigue Mode
-            target = invnormalcdf(agility_delta,-4,4)
-        else:
-            target = invnormalcdf(agility_delta,-1,4)
-        roll = random.random()
-        print_results("Search", target, roll)
-        return roll >= target
-
     def attack_check(self, other):
+        """
+        Roll to determine the result of the attack
+        Compares player's Strength to opponent's Defence
+        No bias towards either player
+        """
         s1 = self.get_stat('Strength', TRACE)
-        # s1 = self.stats['Strength'] + self.apply_luck()
         d2 = other.get_stat('Defence', TRACE)
-        # d2 = other.stats['Defence']+ other.apply_luck() + (3 if other.defence_bonus else 0)
         combat_delta = s1 - d2
-        if CURRENT_PHASE > 7:
-            ###Fatigue Mode
-            target = invnormalcdf(combat_delta,-1,4)
+
+        if CURRENT_PHASE > 7: #Fatigue Mode
+            target = invnormalcdf(combat_delta,-1,4) #Slightly biased
         else:
             target = invnormalcdf(combat_delta,0,4)
+
         roll = random.random()
-        print_results("Attack", target, roll)
+        print_roll_results("Attack", target, roll)
         result =  roll >= target
         if result:
             return CombatOutcome.success
         else:
             return CombatOutcome.countered if self.counter_check(other, 1-roll) else CombatOutcome.failed
 
+
     def counter_check(self, other, roll):
+        """
+        Roll to determine if opponent performs counter attack
+        Compares opponent's Strength to player's Defence
+        Uses inverse of previous roll
+        Biased towards defender (player)
+        """
         d1 = self.get_stat('Defence', TRACE)
-        # d1 = self.stats['Defence'] + self.apply_luck()
         s2 = other.get_stat('Strength', TRACE)
-        # s2 = other.stats['Strength'] + other.apply_luck()
         combat_delta = s2 - d1
-        if CURRENT_PHASE > 7:
-            target = invnormalcdf(combat_delta,2,4)
+
+        if CURRENT_PHASE > 7: #Fatigue mode
+            target = invnormalcdf(combat_delta,2,4) #Slightly less biased
         else:
             target = invnormalcdf(combat_delta,3,4)
-        print_results("Counter", target, roll)
+        print_roll_results("Counter", target, roll)
         result = roll >= target
         return result
 
+
     def raid(self, other):
+        """
+        Raid an item from opponent after killing them
+        Randomly select an item from their inventory and add to player's
+        """
         if other.inventory:
             raided_item = random.choice(other.inventory)
             self.add_item(raided_item)
@@ -459,8 +613,11 @@ class Player:
         else:
             print("Player: {} attempted to raid from {}, but was unsuccessful as they were not carrying anything".format(self.name, other.name))
 
-#An "Enum of CombatOutcome results"
+#An "Enum" of CombatOutcome results
 class CombatOutcome:
+    """
+    This seemed like a good idea at the time...
+    """
     hidden = [] #hacky way so CombatOutcome.hidden != CombatOutcome.failed
     failed = 0  #but at least they're both false, that's good right?
     success = 1
@@ -779,7 +936,14 @@ class Game:
         pickle_obj(os.path.join(cwd,sdir,'{}.dat'.format(self.game_name)), self)
         pickle_obj(os.path.join(cwd,sdir,'{}_{}-{}-{}-{}.dat'.format(self.game_name, t.month, t.day, t.hour, t.minute)), self)
 
-
+def write_player_file(path, player_dicts):
+    """
+    Write player data to a CSV file
+    """
+    with open(path, 'w', newline='') as f:
+        wrt = csv.DictWriter(f, ["Name"] + ATTRIBUTES)
+        wrt.writeheader()
+        wrt.writerows(player_dicts)
 
     def print_players(self):
         for p in self.get_players():
