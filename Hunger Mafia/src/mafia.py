@@ -1,4 +1,4 @@
-### Mafia.py
+### mafia.py
 ### Author: Liam Callaway
 ### Used for running and managing player data for NCSS Hunger Mafia Game
 
@@ -10,6 +10,7 @@ import csv
 import pickle
 import inspect
 import items
+import sys
 
 from datetime import datetime
 import os
@@ -700,7 +701,13 @@ class Game:
         except KeyError:
             raise ValueError("Player {} doesn't exist".format(name))
         return player
+
+
     def set_careers(self, *names):
+        """
+        Set each player within a list to be a careers
+        In this case, careers are chosen by Kingpin so need manual entry
+        """
         for name in names:
             cur_player = self.get_player_by_name(name)
             cur_player.is_career = True
@@ -774,6 +781,7 @@ class Game:
                 recipients[index].add_item(item)
                 print("{} retrieved {}". format(recipients[index].name, item.name))
                 wrt.writerow({"Player": recipients[index].name, "Item": item.name})
+
 
     def run_cornucopia(self, cornucopia_players):
         """
@@ -1037,6 +1045,7 @@ class Game:
         pickle_obj(os.path.join(cwd,sdir,'{}.dat'.format(self.game_name)), self)
         pickle_obj(os.path.join(cwd,sdir,'{}_{}-{}-{}-{}.dat'.format(self.game_name, t.month, t.day, t.hour, t.minute)), self)
 
+
     def write_player_file(path, player_dicts):
         """
         Write player data to a CSV file
@@ -1046,15 +1055,13 @@ class Game:
             wrt.writeheader()
             wrt.writerows(player_dicts)
 
+
     def print_players(self):
         """
         Print each player and relevant info on a new line
         """
         for p in self.get_players():
             print(p)
-
-
-
 
 
     def initial_setup(self):
@@ -1071,6 +1078,7 @@ class Game:
         print("Kingpin is:", self.kingpin.name)
         self.save_game()
 
+
     #This is done in create_players_from_responses now
     # def set_ids_and_districts(self, path):
     #     with open(path) as f:
@@ -1080,6 +1088,7 @@ class Game:
     #             cur_player.id = i
     #             cur_player.district = (i // 2) + 1
 
+
     def run_pregame(self):
         """
         Run the pregame
@@ -1087,7 +1096,6 @@ class Game:
         """
         print("~~~Pregame~~~")
         self.run_cornucopia(self.get_players_from_csv("Cornucopia.csv"))
-
 
 
     def run_game_phase(self, phase = None):
@@ -1153,65 +1161,98 @@ class Game:
             #Perform sponsor giveaways
             self.distribute_sponsor_items(self.current_phase)
 
+
     def lynch_player_from_file(self, day = None):
+        """
+        Initiated lynching by reading player listed in CSV file
+        Would be nice if this could be scraped from vote scripts instead of csv
+        """
+        #TODO Scrape vote script instead
         if day is None:
             day = self.current_phase
+
         with open("lynches.csv") as f:
             rdr = csv.DictReader(f)
+            #Read who should be lynched
             lynched_name = [line["Name"] for line in rdr if line["Day"] == str(day)]
-            if len(lynched_name) > 1:
+            if len(lynched_name) > 1: #Multiple lynches?
                 raise ValueError("Invalid number of Lynched players for Day {}: {}".format(day, len(lynched_name)))
-            elif len(lynched_name) == 0:
+            elif len(lynched_name) == 0: #No lynch
                 print("No Lynch Target for Day {}".format(day))
-            else:
+            else: #Perform the lynching
                 self.lynch_player(lynched_name[0])
 
+
     def lynch_player(self, player_name):
+        """
+        Actually performs the lynching (killing) of selected player
+        Also makes lynched player drop all their items
+        """
         player = self.get_player_by_name(player_name)
         if player.is_alive:
             player.set_dead()
             self.player_item_drop(player)
             player.death_text = "Lynched Day {}".format(CURRENT_PHASE)
             print("{} Has been Lynched on Day {}".format(player_name, CURRENT_PHASE))
-        else:
+        else: #Can't lynch a dead guy
             print("{} cannot be lynched as they are already dead".format(player_name))
 
     def player_item_drop(self, player):
+        """
+        Empty a player's inventory (usually if they died)
+        Adds dropped items into a pool for later reuse (eg. in Feast)
+        """
         self.dropped_items += player.inventory
         print("{} dropped {}".format(player.name, player.inventory))
         print("Total dropped items: {}".format(self.dropped_items))
         player.inventory = []
 
+
     def assign_dropped_item(self, player, item = None):
+        """
+        Assign a player a specific item from the dropped pool
+        """
         if item not in self.dropped_items:
             raise ValueError("Item has not been dropped")
-
-        if item is None:
+        if item is None: #Item choice will usually be random
             selected_item = random.choice(self.dropped_items)
-        else:
+        else: #But we might want to be able to specify it
             selected_item = item
+
         player.add_item(selected_item)
         self.dropped_items.remove(item)
 
+
     def perform_action(self, current_action):
+        """
+        Validate, perform and resolve a night action
+        """
         player, action = self.get_player_by_name(current_action["Player"]), current_action["Action"]
-        if not player.can_perform_any_action():
+
+        if not player.can_perform_any_action(): #Player is preventing from performing an action somehow
             print("{} tried to {} but cannot as they are {}".format(player.name, action, "Dead" if not player.is_alive else "Trapped"))
             return "Failed: {}".format("Player Dead" if not player.is_alive else "Player Trapped")
-        elif action in self.cooldown_actions and player.action_on_cooldown(action):
+
+        elif action in self.cooldown_actions and player.action_on_cooldown(action): #Action is on cooldown, can't be used tonight
                 print("{} tried to {} but cannot it is on Cooldown {}".format(player.name, action, player.actions))
                 return "Failed: Cooldown"
-        else:
+
+        else: #Player is able to perform an action
+
             if action == "Hide":
                 player.hide()
                 return "Success"
+
             elif action == "Guard":
                 player.guard()
                 return "Success"
+
             elif action == "Attack" or action == "Kill":
                 target = self.get_player_by_name(current_action["Target"])
+
                 if not target.is_alive:
                     print("{} tried to attack {}, but failed as the target is already dead".format(player.name, target.name))
+
                 else:
                     if action == "Attack":
                         attack_action_res = player.attack(target)
@@ -1226,34 +1267,44 @@ class Game:
                         player.raid(target)
                         self.player_item_drop(target)
                         return "Success"
+
                     elif attack_action_res == CombatOutcome.countered:
                         target.raid(player)
                         self.player_item_drop(player)
                         return "Countered"
+
                     elif attack_action_res == CombatOutcome.failed:
                         return "Failed"
+
                     elif attack_action_res == CombatOutcome.hidden:
                         return "Hidden"
+
                     elif attack_action_res == CombatOutcome.success_protected:
                         return "Protected from Attack"
+
                     elif attack_action_res == CombatOutcome.countered_protected:
                         return "Countered but Protected"
+
             else: #using an item
-                if action.endswith("Serum"):
+                if action.endswith("Serum"): #Drinking a serum
                     available_serums = player.get_usable_items(action)
+
                     if available_serums:
                         return player.drink_serum(available_serums[0])
                     else:
                         print ("{} tried to drink {}, but doesn't own one".format(player.name, action))
                         return "Failed"
-                else:
-                    target = self.get_player_by_name(current_action["Target"])
 
+                else: #Regular active item
+                    target = self.get_player_by_name(current_action["Target"])
                     return player.perform_item_action(target, action)
 
 
 
 def load_game(filename = 'game', timestamp = None):
+    """
+    Load a game object from a pickle filename
+    """
     cwd = os.path.dirname(os.path.realpath(__file__))
     sdir = "backup"
     if timestamp is None:
@@ -1262,17 +1313,25 @@ def load_game(filename = 'game', timestamp = None):
         return unpickle_obj(os.path.join(cwd,sdir,'{}_{}-{}-{}-{}.dat'.format(filename, timestamp.month, timestamp.day, timestamp.hour, timestamp.minute)))
 
 
+###This is probably how I should be running the script...
+# if __name__ == "__main__":
+#     if len(sys.argv) != 2:
+#         raise ValueError("Please provide a single argument to specify a phase to simulate (0 = setup)")
+#     CURRENT_PHASE = int(sys.argv[1])
+#     game = load_game()
+#     game.lynch_player_from_file(CURRENT_PHASE)
+#     game.print_players()
+#     game.save_game()
+
+###However I'm lazy, so I just did it like this:
 ###NIGHT 0
 # game = Game()
-
 # game.initial_setup()
 # game.set_careers("Ben Jelavic", "Caitlin Bell", "Evan Kohilas", "Rachel Alger", "Shane Arora", "Terry Watson")
 # game.print_players()
 # game.run_pregame()
 # game.print_players()
 # game.save_game()
-
-
 
 ###DAY 1
 # CURRENT_PHASE = 1
@@ -1303,7 +1362,6 @@ def load_game(filename = 'game', timestamp = None):
 # game.run_game_phase()
 # game.print_players()
 # game.save_game()
-
 
 ##DAY 3
 # CURRENT_PHASE = 3
@@ -1353,7 +1411,6 @@ def load_game(filename = 'game', timestamp = None):
 # game.print_players()
 # game.save_game()
 
-
 ###DAY 6
 # CURRENT_PHASE = 6
 # game = load_game()
@@ -1384,7 +1441,8 @@ def load_game(filename = 'game', timestamp = None):
 # game.print_players()
 # game.save_game()
 
-###DAY 8
+###At this point I realised I could just have the lynch step within run game phase...
+###PHASE 8
 # CURRENT_PHASE = 8
 # game = load_game()
 # game.set_phase(CURRENT_PHASE)
@@ -1392,8 +1450,7 @@ def load_game(filename = 'game', timestamp = None):
 # game.print_players()
 # game.save_game()
 
-
-###DAY 9 - Feast
+###PHASE 9 - Feast
 # CURRENT_PHASE = 9
 # game = load_game()
 # game.set_phase(CURRENT_PHASE)
@@ -1401,8 +1458,7 @@ def load_game(filename = 'game', timestamp = None):
 # game.print_players()
 # game.save_game()
 
-
-###DAY 10
+###PHASE 10
 # CURRENT_PHASE = 10
 # game = load_game()
 # game.set_phase(CURRENT_PHASE)
@@ -1410,8 +1466,7 @@ def load_game(filename = 'game', timestamp = None):
 # game.print_players()
 # game.save_game()
 
-
-###DAY 11
+###PHASE 11
 #CURRENT_PHASE = 11
 #game = load_game()
 #game.set_phase(CURRENT_PHASE)
@@ -1419,10 +1474,10 @@ def load_game(filename = 'game', timestamp = None):
 #game.print_players()
 #game.save_game()
 
-###DAY 12
-CURRENT_PHASE = 12
-game = load_game()
-game.set_phase(CURRENT_PHASE)
-game.run_game_phase()
-game.print_players()
-game.save_game()
+###PHASE 12
+# CURRENT_PHASE = 12
+# game = load_game()
+# game.set_phase(CURRENT_PHASE)
+# game.run_game_phase()
+# game.print_players()
+# game.save_game()

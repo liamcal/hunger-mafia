@@ -1,3 +1,7 @@
+### items.py
+### Author: Liam Callaway
+### Specifies item classes for use in Hunger Mafia game
+
 from collections import defaultdict
 import sys
 import inspect
