@@ -1,5 +1,17 @@
 # Mafia Hunger Games Post Game Summary
 _Liam Callaway_
+
+## General overview
+Firstly thanks everyone for your patience, both throughout the game and afterwards with my delays in putting together this summary. Hopefully it'll be at least somewhat worth it.
+
+Secondly, let me thank you again for being guinea pigs in what was a fairly large experiment of mine. I wanted to try out something completely new, with very little idea how it would work out. Thanks to you all, I think it came together rather well. There were definitely things that didn't work so well, but also quite a few things that ending up being a lot of fun and brought some new dimensions to Mafia.
+
+Considering how little I let on as to how the game would work, and how involved the mechanics got at times, I think all in all everyone played very well. As always, there were a few nice logical deductions made, and some amusing moments of deception. As the game progressed I started to see more people considering what they knew of the mechanics and using this to influence their decisions in game, which is always a good thing. Finally, while I think in some specific areas, the game was slightly unbalanced, overall things were fairly even. This was reflected in the ebb and flow of the town:mafia ratio.
+
+Hopefully you all enjoyed it as much as I enjoyed planning and running the game. As always, I'm very open to feedback and ongoing discussion (either publicly in the group, or privately in a PM). I realise seeing as it's so long now since the game actually ended, finer details may have been forgotten. But if this summary jogs your memory of anything, feel free to let me know.
+
+Obviously it'll be a little while before I attempt something like this again. I like to think that these sort of modifications don't necessarily make mafia *better*, just different. For a while at least, I'd like to run a few more straightforward mafia games. Maybe in the future though, some of these elements could be reused in another game. I'd also be more than happy for people to take elements (or source code) from this game, and use it in their own.
+
 ## Stats and Character Generation
 So to start with, let's talk about stats. There were 4 primary stats, which each player was asked to rank in order of preference during sign-up. This would influence how stats were distributed.
 
